@@ -35,10 +35,15 @@ html{
         font-size: 10px;  /* 10px on 1728px and > 1728px*/
     }
 }
+@media screen and (max-width: 425px) {
+    html{
+        font-size: 3.125vw;  /* 10px on 320px */
+    }
+}
 body {
     font-family: 'Montserrat';
     font-weight: 500;
-    font-size: 16rem;
+    font-size: 1.6rem;
     background-color: #0E0E1C;
     height: 100%;
     color: #FFFFFF;
@@ -47,10 +52,10 @@ body {
     }
 }
 .wrapper {
+    overflow-x: hidden;
     display: flex;
     height: 100vh;
     flex-direction: column;
-    overflow: hidden;
 }
 
 
@@ -75,16 +80,410 @@ body {
 /* --MAIN----MAIN----MAIN-- */
 .main {
     flex: 1 1 auto;
+
     &_welcome{
+        width: 100%;
+        background: url("/src/welcome/back.png") 0 -60rem no-repeat;
+        background-size: cover;
+        &_content{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
 
-        &_h{
-
+            &_h{
+                font-size: 5rem;
+                line-height: 134%;
+                text-align: center;
+                letter-spacing: 0.27em;
+                text-transform: uppercase;
+    
+                margin-top: 47.4rem;
+                margin-bottom: 5.7rem;
+            }
+            &_text{
+                font-weight: 400;
+                font-size: 3rem;
+                line-height: 134%; 
+                text-align: center;
+    
+                margin-bottom: 5.7rem;
+            }
+            &_btn{
+                font-weight: 600;
+                font-size: 1.5rem;
+                line-height: 134%;
+                text-align: center;
+                text-transform: uppercase;
+                color: #FFFFFF;
+    
+                padding: 2.3rem 3.3rem;
+                background: rgba(14, 14, 28, 0.71);
+                border: 0.1rem solid #FFFFFF;
+                border-radius: 3.5rem 0rem;
+                transition: all 0.5s ease;
+    
+                margin-bottom: 28.4rem;
+                cursor: pointer;
+                &:hover{
+                    border-radius: 0rem 3.5rem;
+                }
+            }
         }
-        &_text{
-
+        &_border{
+            display: none;
         }
-        &_btn{
+    }
+    @media (max-width: 425px) {
+        &_welcome{
+            background-position: center;
+            &_content{
+                &_h{
+                    font-size: 1.9rem;
+                    line-height: 134%;
+        
+                    margin-top: 22.8rem;
+                    margin-bottom: 1.3rem;
+                }
+                &_text{
+                    font-size: 1rem;
+        
+                    margin-bottom: 5.6rem;
+                }
+                &_btn{
+                    font-size: 0.8rem;
+        
+                    padding: 1.2rem 1.6rem;
+                    border-radius: 1.7rem 0rem;
+        
+                    margin-bottom: 18.6rem;
+                    &:hover{
+                        border-radius: 0rem 1.7rem;
+                    }
+                }
+            }
+            &_border{
+                display: flex;
+                &_1{
+                    height: 1.8rem;
+                    flex: 0 1 50%;
+                    border-radius: 0 2rem 0 0;
+                    background-color: #0E0E1C;
+                }
+                &_2{
+                    height: 1.8rem;
+                    flex: 0 1 50%;
+                    border-radius: 2rem 0 0 0;
+                    background-color: #0E0E1C;
+                }
+            }
+        }
+    }
+
+    &_services{
+        position: relative;
+        
+        margin-top: 12.2rem;
+        margin-bottom: 15.8rem;
+
+        display: flex;
+        flex-wrap: wrap;
+        gap: 3.9rem;
+        &_item{
+            position: relative;
+            width: 33.8rem;
+            height: 33.8rem;
+
+            display: flex;
+            justify-content: center;
+            &:first-child{
+                border: 0.1rem solid #FFFFFF;
+                border-radius: 0rem 9rem;
+            }
+            & > h2 {
+                align-self: center;
+                font-weight: 300;
+                font-size: 5rem;
+                line-height: 134%;
+                text-align: center;
+            }
+            & > a {
+                margin-top: auto;
+                margin-bottom: 2.9rem;
+                & > p {
+                    position: relative;
+                    color: #FFFFFF;
+                    font-weight: 400;
+                    font-size: 2.5rem;
+                    line-height: 134%;
+                    text-align: center;
+                    transition: all 0.5s ease-out;
+                    z-index: 2;
+                }
+                &:hover > p{
+                    transform: translateY(-11rem);
+                }
+            }   
+            & > a > picture > img {
+                border: 0.1rem solid #FFFFFF;
+                border-radius: 0rem 9rem;
+                position: absolute;
+                top: 0;
+                left: 0;
+
+                width: 33.8rem;
+                height: 33.8rem;
+                z-index: 0;
+            }
+            &_r{
+                position: relative;
+                width: 71.5rem;
             
+                & > a > picture > img {
+                    border: 0.1rem solid #FFFFFF;
+                    border-radius: 9rem 0rem;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 71.5rem;
+                    height: 33.8rem;
+                    z-index: 0;
+                }
+            }
+        }
+        &_square{
+            &_1{
+                position: absolute;
+                width: 9.122rem;
+                height: 9.122rem;
+                border: 0.1rem solid #FFFFFF;
+                border-radius: 0px 3rem;
+                transform: rotate(-45deg);
+                transition: all 0.5s ease;
+
+                top: 31.3rem;
+                left: -15rem;
+                &:hover{
+                    transform: rotate(-225deg);
+                }
+            }
+            &_2{
+                position: absolute;
+                width: 9.122rem;
+                height: 9.122rem;
+                border: 0.1rem solid #FFFFFF;
+                border-radius: 0px 3rem;
+                transform: rotate(-45deg);
+                transition: all 0.5s ease;
+
+                bottom: 31.3rem;
+                right: -15rem;
+                &:hover{
+                    transform: rotate(-225deg);
+                }
+            }
+            &_3{
+                position: absolute;
+                width: 9.122rem;
+                height: 9.122rem;
+                border: 0.1rem solid #FFFFFF;
+                border-radius: 3rem 0rem;
+                transform: rotate(-45deg);
+                transition: all 0.5s ease;
+
+                bottom: -11rem;
+                right: 31.2rem;
+                &:hover{
+                    transform: rotate(-225deg);
+                }
+            }
+        }
+    }
+    @media (max-width: 425px) {
+        &_services{
+            margin-top: 2.4rem;
+            margin-bottom: 4.5rem;
+
+            gap: 1rem;
+            justify-content: center;
+            &_item{
+                width: 12.6rem;
+                height: 12.6rem;
+
+                &:first-child{
+                    border: 0.1rem solid #FFFFFF;
+                    border-radius: 0rem 2rem;
+                }
+                & > h2 {
+                    font-weight: 700;
+                    font-size: 1.6rem;
+                }
+                & > a {
+                    margin-top: auto;
+                    margin-bottom: 1.7rem;
+                    & > p {
+                        font-size: 1rem;
+                    }
+                    &:hover > p{
+                        transform: translateY(-3.5rem);
+                    }
+                }   
+                & > a > picture > img {
+                    border: 0.1rem solid #FFFFFF;
+                    border-radius: 0rem 2rem;
+    
+                    width: 12.6rem;
+                    height: 12.6rem;
+                }
+                &_r{
+                    width: 12.6rem;
+                
+                    & > a > picture > img {
+                        border-radius: 2rem 0rem;
+                        width: 12.6rem;
+                        height: 12.6rem;
+                    }
+                }
+            }
+            &_square{
+                &_1{
+                    display: none;
+                }
+                &_2{
+                    display: none;
+                }
+                &_3{
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .slider{
+        position: relative;
+        margin-top: 15.8rem;
+        margin-bottom: 15.2rem;
+
+        &_header{
+            position: relative;
+            display: flex;
+            align-items: center;
+
+            > span {
+                border: 1px solid #FFFFFF;
+                height: 0.1rem;
+                width: 49.6rem;
+                &:last-child{
+                    display: none;
+                }
+            }
+
+            > p {
+                margin-left: 5.8rem;
+                font-weight: 300;
+                font-size: 5rem;
+                line-height: 134%;
+            }
+        }
+
+        &_box{
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &_slider{
+            min-width: 0; /* Обезательно для слайдера в flex */
+            width: 241.8rem;
+            height: 54.5rem;
+            position: relative;
+            margin-top: 8.9rem;
+            margin-bottom: 6.2rem;
+            /* Ограничивающая оболочка */
+            & .slick-list {
+                overflow: hidden;
+            }
+            /* Лента слайдов */
+            & .slick-track{
+                display: flex;
+            }
+            & .slick-slide {
+                position: relative;
+                margin: 0rem 2.4rem;
+                width: 77.4rem;
+                height: 54.5rem;
+                > picture{
+                position: relative;
+                width: 100%;
+                height: 54.5rem;
+                    span{
+                        position: absolute;
+                        width: 77.4rem;
+                        height: 54.5rem;
+                        background: linear-gradient(0deg, rgba(14, 14, 28, 0.81), rgba(14, 14, 28, 0.81));
+                    }
+                    img{
+                       height: 100%;
+                    }
+                }
+            }
+            /* Слайд активный (показывается) */
+            & .slick-slide.slick-active{
+                border: 0.1rem solid #fff;
+                width: 77.4rem;
+                height: 54.5rem;
+                > picture{
+                    span{
+                        width: 77.2rem;
+                        height: 54.2rem;
+                        background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.88%, rgba(0, 0, 0, 0.9) 95.83%);
+                    }
+                    img{
+                        border: 0.1rem solid #fff inset;
+                    }
+                }
+            }
+        }
+        &_arrows{
+            display: flex;
+            align-items: center;
+            padding: 0rem 6.3rem;
+            .slider_text{
+                min-width: 0; /* Обезательно для слайдера в flex */
+                width: 71.1rem;
+                position: relative;
+                /* Ограничивающая оболочка */
+                & .slick-list {
+                    overflow: hidden;
+                }
+                /* Лента слайдов */
+                & .slick-track{
+                    display: flex;
+                    align-items: center;
+                    width: 71.1rem;
+                }
+                .text-box{
+                    width: 81.1rem;
+                    position: relative;
+                    padding: 0rem 3.3rem;
+                    &-content {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        p{
+                            font-weight: 400;
+                            font-size: 3rem;
+                            line-height: 134%;     
+                            text-align: center;
+                            text-transform: uppercase;
+                        }
+                    }
+                }
+            }
+            svg {
+                cursor: pointer;
+            }
         }
     }
 }

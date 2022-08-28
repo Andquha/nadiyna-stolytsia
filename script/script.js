@@ -1,25 +1,38 @@
 $(document).ready(function () {
-    $('.main_advantage_box_content_slider').slick({
+    $('.slider_slider').slick({
       adaptiveHeight: true,
-      slidesToShow: 4,
+      slidesToShow: 1,
       slidestoScroll: 1,
       speed: 1000,
       easing: 'ease',
       infinite: true,
       autoplay: true,
+      variableWidth: true,
       autoplaySpeed: 5000,
+      centerMode: true,
+      focusOnSelect: true,
       swipe: true,
       nextArrow: '.main_advantage_box_content_slider_arrows_right',
       prevArrow: '.main_advantage_box_content_slider_arrows_left',
+      asNavFor: '.slider_text',
       responsive:[
         {
-            breakpoint: 768,
+            breakpoint: 425,
             settings: {
                 slidesToShow: 1,
             }
         }
       ]
     });
+    $('.slider_text').slick({
+        adaptiveHeight: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows: false,
+        centerMode: true,
+        fade: true,
+        asNavFor: '.slider_slider',
+      });
   });
 
 
