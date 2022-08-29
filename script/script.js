@@ -10,19 +10,12 @@ $(document).ready(function () {
       variableWidth: true,
       autoplaySpeed: 5000,
       centerMode: true,
+      dots: true,
       focusOnSelect: true,
       swipe: true,
       nextArrow: '.main_advantage_box_content_slider_arrows_right',
       prevArrow: '.main_advantage_box_content_slider_arrows_left',
       asNavFor: '.slider_text',
-      responsive:[
-        {
-            breakpoint: 425,
-            settings: {
-                slidesToShow: 1,
-            }
-        }
-      ]
     });
     $('.slider_text').slick({
         adaptiveHeight: true,

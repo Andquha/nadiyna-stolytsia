@@ -35,7 +35,7 @@ html{
         font-size: 10px;  /* 10px on 1728px and > 1728px*/
     }
 }
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 500px) {
     html{
         font-size: 3.125vw;  /* 10px on 320px */
     }
@@ -63,6 +63,11 @@ body {
 ._container{
     max-width: 109.2rem;
     margin: 0 auto;
+}
+@media screen and (max-width: 500px) {
+    ._container{
+        max-width: 26.2rem;
+    }
 }
 /*--CONTAINER----CONTAINER----CONTAINER--*/
 
@@ -134,7 +139,7 @@ body {
             display: none;
         }
     }
-    @media (max-width: 425px) {
+    @media (max-width: 500px) {
         &_welcome{
             background-position: center;
             &_content{
@@ -299,7 +304,7 @@ body {
             }
         }
     }
-    @media (max-width: 425px) {
+    @media (max-width: 500px) {
         &_services{
             margin-top: 2.4rem;
             margin-bottom: 4.5rem;
@@ -402,7 +407,7 @@ body {
             margin-bottom: 6.2rem;
             /* Ограничивающая оболочка */
             & .slick-list {
-                overflow: hidden;
+                
             }
             /* Лента слайдов */
             & .slick-track{
@@ -425,6 +430,31 @@ body {
                     }
                     img{
                        height: 100%;
+                       box-shadow: 0px 30px 50px rgba(0, 0, 0, 0.6);
+                    }
+                }
+            }
+            > ul {
+                display: flex;
+                position: absolute;
+                width: 8rem;
+                top: 49rem;
+                left: 46%;
+                list-style: circle ;
+                > li {
+                    list-style: disc;
+                    margin: 0rem 1rem;
+                    font-size: 3rem;
+                    &::marker{
+                        color: rgba(88, 88, 88, 0.7);
+                    }
+                    > button {
+                        display: none;
+                    }
+                }
+                .slick-active{
+                    &::marker{
+                        color: rgba(255, 255, 255, 1);
                     }
                 }
             }
@@ -482,10 +512,334 @@ body {
                 }
             }
             svg {
+                width: 7.6rem;
+                height: 4.1rem;
                 cursor: pointer;
             }
         }
     }
+    @media (max-width: 500px) {
+        .slider{
+            position: relative;
+            margin-top: 4.5rem;
+            margin-bottom: 6rem;
+    
+            &_header{
+                > span {
+                    border: 1px solid #FFFFFF;
+                    height: 0.1rem;
+                    width: 8.2rem;
+                    &:last-child{
+                        display: block;
+                    }
+                }
+    
+                > p {
+                    white-space: nowrap;
+                    margin-left: 2.3rem;
+                    margin-right: 2.2rem;
+                    font-weight: 700;
+                    font-size: 1.6rem;
+                }
+            }
+    
+            &_slider{
+                min-width: 0; /* Обезательно для слайдера в flex */
+                width: 171.6rem;
+                height: 16.4rem;
+                position: relative;
+                margin-top: 1.5rem;
+                margin-bottom: 1.5rem;
+                /* Лента слайдов */
+                & .slick-track{
+                    display: flex;
+                }
+                & .slick-slide {
+                    position: relative;
+                    margin: 0rem 2.4rem;
+                    width: 26.2rem;
+                    height: 16.4rem;
+                    > picture{
+                    position: relative;
+                    width: 100%;
+                    height: 16.4rem;
+                        span{
+                            width: 26.2rem;
+                            height: 16.4rem;
+                        }
+                        img{
+                            width: 100%;
+                        }
+                    }
+                }
+                > ul {
+                    display: none;
+                    // width: 4rem;
+                    // top: 13.2rem;
+                    // left: 48%;
+                    // z-index: 6;
+                    // > li {
+                    //     margin: 0rem 0.5rem;
+                    //     font-size: 2rem;
+                    //     > button {
+                    //         display: none;
+                    //     }
+                    // }
+                }
+                /* Слайд активный (показывается) */
+                & .slick-slide.slick-active{
+                    border: 0.1rem solid #fff;
+                    width: 26.2rem;
+                    height: 16.4rem;
+                    > picture{
+                        span{
+                            width: 26.2rem;
+                            height: 16.4rem;
+                            background: linear-gradient(180deg, rgba(0, 0, 0, 0) 46.88%, rgba(0, 0, 0, 0.9) 95.83%);
+                        }
+                        img{
+                            border: 0.1rem solid #fff inset;
+                        }
+                    }
+                }
+            }
+            &_arrows{
+                width: 30rem;
+                justify-content: space-around;
+                padding: 0rem 1.3rem;
+                .slider_text{
+                    display: none;
+                }
+                svg {
+                    width: 3rem;
+                    height: 1.4rem;
+                    cursor: pointer;
+                }
+            }
+        } 
+    }
+
+    .about{
+        position: relative;
+        &_content{
+            display: flex;
+            flex-direction: column;
+            > p{
+                width: 64.1rem;
+                font-weight: 400;
+                font-size: 2.5rem;
+                line-height: 134%;
+                margin-bottom: 2.8rem;
+            }
+            > picture {
+                z-index: 2;
+                align-self: flex-end;
+                img{
+                    width: 63.5rem;
+                }
+            }
+        }
+
+        > picture{
+            z-index: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            transform: rotate(25deg);
+            img{
+                width: 95.477rem;
+                height: 91.24rem;
+            }
+        }
+    }
+
+    @media (max-width: 500px) {
+        .about{
+            &_content{
+                > p{
+                    width: 25.9rem;
+                    font-size: 1.2rem;
+                    margin-bottom: 2.2rem;
+                }
+                > picture {
+                    z-index: 2;
+                    align-self: center;
+                    img{
+                        border: 0.1rem solid #fff;
+                        width: 22rem;
+                    }
+                }
+            }
+    
+            > picture{
+                img{
+                    width: 33.8rem;
+                    height: 32.3rem;
+                }
+            }
+        }
+    }
+
+    .steps{
+        position: relative;
+        margin-top: 23.3rem;
+        margin-bottom: 23.3rem;
+        background: url("/src/steps/back.png") 0rem -65rem no-repeat;
+        background-size: cover;
+        padding: 9.4rem 0rem 15.3rem 0rem;
+        &_header{
+            position: relative;
+            display: flex;
+            align-items: center;
+    
+            > span {
+                border: 1px solid #FFFFFF;
+                height: 0.1rem;
+                width: 49.6rem;
+                &:last-child{
+                    display: none;
+                }
+            }
+            > p {
+                margin-left: 5.8rem;
+                font-weight: 300;
+                font-size: 5rem;
+                line-height: 134%;
+            }
+        }
+        &_content{
+            display: flex;
+            margin-top: 12rem;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            .steps_item{
+                display: flex;
+                align-items: center;
+                flex: 0 1 47%;
+                &:nth-child(1){
+                    margin-bottom: 20.3rem;
+                }
+                &:nth-child(2){
+                    margin-bottom: 20.3rem;
+                }
+                .steps_number{
+                    width: 15.2rem;
+                    height: 15.2rem;
+                    position: relative;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    margin-right: 7rem;
+
+                    padding: 2.3rem 3.3rem;
+                    font-weight: 700;
+                    font-size: 8rem;
+                    line-height: 134%;
+
+                    border: 0.1rem solid #FFFFFF;
+                    border-radius: 4rem 0rem;
+                }
+                .item_text{
+                    position: relative;
+                    > h3{
+                        font-weight: 700;
+                        font-size: 2.5rem;
+                        line-height: 134%;
+                        margin-bottom: 1.2rem;
+                    }
+                    > p {
+                        font-size: 2rem;
+                        line-height: 134%;
+                    }
+                }
+            }
+        }
+    }
+    @media (max-width: 500px) {
+        .steps{
+            margin-top: 4.1rem;
+            margin-bottom: 5.2rem;
+            background: url("/src/steps/back.png") 0rem 0rem no-repeat;
+            background-size: cover;
+            padding: 4.3rem 0rem 3.298rem 0rem;
+            &_header{
+                > span {
+                    border: 1px solid #FFFFFF;
+                    height: 0.1rem;
+                    width: 8.2rem;
+                    &:last-child{
+                        display: block;
+                    }
+                }
+    
+                > p {
+                    white-space: nowrap;
+                    margin-left: 1.9rem;
+                    margin-right: 1.8rem;
+                    font-weight: 700;
+                    font-size: 1.6rem;
+                }
+            }
+            &_content{
+                display: flex;
+                margin-top: 2.7rem;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                .steps_item{
+                    display: flex;
+                    align-items: center;
+                    flex: 0 1 100%;
+                    margin-bottom: 3rem;
+                    .steps_number{
+                        width: 6.5rem;
+                        height: 6.602rem;
+                        margin-right: 1.2rem;
+    
+                        padding: 0.8rem 1.4rem 1.1rem 1.4rem;
+                        font-weight: 700;
+                        font-size: 3.5rem;
+                        line-height: 134%;
+    
+                        border: 0.1rem solid #FFFFFF;
+                        border-radius: 2rem 0rem;
+                    }
+                    &:nth-child(1){
+                        margin-bottom: 3rem;
+                    }
+                    &:nth-child(2){
+                        margin-bottom: 3rem;
+                        flex-direction: row-reverse;
+                        .steps_number{
+                            margin-right: 0rem;
+                            margin-left: 1.2rem;
+                            border-radius: 0rem 2rem;
+                        }
+                    }
+                    &:nth-child(4){
+                        margin-bottom: 3rem;
+                        flex-direction: row-reverse;
+                        .steps_number{
+                            margin-right: 0rem;
+                            margin-left: 1.2rem;
+                            border-radius: 0rem 2rem;
+                        }
+                    }        
+
+                    
+                    .item_text{
+                        > h3{
+                            font-size: 1.2rem;
+                            margin-bottom: 0.4rem;
+                        }
+                        > p {
+                            font-size: 1rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
 }
 /* --MAIN----MAIN----MAIN-- */
 
