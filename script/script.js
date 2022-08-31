@@ -16,6 +16,14 @@ $(document).ready(function () {
       nextArrow: '.main_advantage_box_content_slider_arrows_right',
       prevArrow: '.main_advantage_box_content_slider_arrows_left',
       asNavFor: '.slider_text',
+      responsive:[
+        {
+            breakpoint: 500,
+            settings: {
+                dots: false,
+            }
+        }
+      ]
     });
     $('.slider_text').slick({
         adaptiveHeight: true,
@@ -58,41 +66,6 @@ form.submit(function(event){
                         alert('Спасибо! Письмо отправленно')
                         Form.removeClass('sending');
                         Form.removeClass('active');
-                        document.body.classList.remove("active");
-                    }
-                })
-            }else{
-                alert('В поле "Your E-mail" обезательно нужны "@" и "."')
-            }
-        }else{
-            alert('Заполните все обезательные поля')
-        };
-});
-formshow.submit( function(event){
-        event.preventDefault();
-        let Form = $(this);
-        let errors = formValidate(Form);
-        let error = errors[0];
-        let mail = errors[1];
-        console.log(errors);
-        if(error === 0){
-            if(mail === 0){
-                Form.addClass('sending');
-                $('body').addClass('active');
-                $.ajax({
-                    type: Form.attr('method'),
-                    url: Form.attr('action'),
-                    data: new FormData(this),
-                    contentType: false,
-                    cache: false,
-                    processData: false,
-        
-                    success: function(e){
-                        $('input').val('');
-                        $('textarea').val('');
-                        alert('Спасибо! Письмо отправленно')
-                        Form.removeClass('sending');
-                        $('.main_form_box_show').removeClass('active');
                         document.body.classList.remove("active");
                     }
                 })
@@ -162,93 +135,39 @@ button.on('click', function(e){
 function close(){
     button.removeClass('active');
     $('body').removeClass('active');
+    $('.wrapper').removeClass('active');
     $('.header_menu_list').removeClass('active');
 };
 function open(){
     button.addClass('active');
     $('body').addClass('active');
+    $('.wrapper').addClass('active');
     $('.header_menu_list').addClass('active');
 };
 
-// Кнопки Faq
-let faq = $('.main_faq_box_question_item');
 
-faq.on('click', function(e){
+// Кнопка випадающего списка
+let arrow = $('.header_menu_item.list_hide');
+
+arrow.on('click', function(e){
     e.preventDefault();
-    if($(this).hasClass('active')){
-        faq.removeClass('active');
-        faq.children().removeClass('active');
+    if(arrow.hasClass('active')){
+        closemenu();
     }else{
-        faq.removeClass('active');
-        faq.children().removeClass('active');
-        $(this).addClass('active');
-        $(this).children().addClass('active');
+        openmenu();
     }
 });
 
-// Каталог
-const img = $('.main_production_box_item_img')
-const h = $('.main_production_box_item_h');
+function closemenu(){
+    arrow.removeClass('active');
+    $('.header_menu_list_hide').removeClass('active');
+};
+function openmenu(){
+    arrow.addClass('active');
+    $('.header_menu_list_hide').addClass('active');
+};
 
-let text = "";
-img.on('mouseover', function(e){
-    img.parent().css({"background-color": "#fff"});
-    h.css({"color": "#000"});
-    $(this).parent().css({"background-color": "#000"})
-    $(this).siblings('.main_production_box_item_h').css({"color": "#fff"})
-    text = $(this).siblings('.main_production_box_item_h').html();
-    if(document.location.href == "https://cehh.com.ua/ru"){
-        $(this).siblings('.main_production_box_item_h').html('Заказать');
-    }else{
-        $(this).siblings('.main_production_box_item_h').html('Замовити');
-    }
-});
-img.on('mouseout', function(e){
-    img.parent().css({"background-color": "#fff"});
-    h.css({"color": "#000"});
-    $(this).siblings('.main_production_box_item_h').html(text);
-});
 
-h.on('mouseover', function(e){
-    text = $(this).html();
-    h.parent().css({"background-color": "#fff"});
-    h.css({"color": "#000"});
-    $(this).parent().css({"background-color": "#000"})
-    $(this).css({"color": "#fff"})
-    if(document.location.href == "https://cehh.com.ua/ru"){
-        $(this).html('Заказать');
-    }else{
-        $(this).html('Замовити');
-    }
-});
-h.on('mouseout', function(e){
-    h.parent().css({"background-color": "#fff"});
-    h.css({"color": "#000"});
-    $(this).html(text);
-});
-
-img.on('click', function(e){
-    e.preventDefault();
-    $('body').addClass('active');
-    $('.main_form_box_show').addClass('active');
-});
-h.on('click', function(e){
-    e.preventDefault();
-    $('body').addClass('active');
-    $('.main_form_box_show').addClass('active');
-});
-
-$('.footer_container_box_social_button').on('click', function(e){
-    e.preventDefault();
-    $('body').addClass('active');
-    $('.main_form_box_show').addClass('active');
-});
-
-$('.main_form_box_show_content_img_close').on('click', function(e){
-    e.preventDefault();
-    $('body').removeClass('active');
-    $('.main_form_box_show').removeClass('active');
-});
 
 
 // Скролл на кнопках 
@@ -257,7 +176,7 @@ $('a[href^="#"]').on("click", function () {
 
     close();
 
-    $("html, body").animate({
+    $(".wrapper").animate({
         scrollTop: $(href).offset().top - 30
     }, {
         duration: 370,   // по умолчанию «400»
