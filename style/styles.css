@@ -34,17 +34,20 @@ h6 {
 }
 
 html {
-  font-size: 0.579vw; /* 10px on 1728px */
+  font-size: 0.579vw;
+  /* 10px on 1728px */
 }
 
 @media screen and (min-width: 1728px) {
   html {
-    font-size: 10px; /* 10px on 1728px and > 1728px*/
+    font-size: 10px;
+    /* 10px on 1728px and > 1728px*/
   }
 }
 @media screen and (max-width: 500px) {
   html {
-    font-size: 3.125vw; /* 10px on 320px */
+    font-size: 3.125vw;
+    /* 10px on 320px */
   }
 }
 body {
@@ -354,6 +357,18 @@ body.active {
 .main {
   margin-top: -13.4rem;
   flex: 1 1 auto;
+  /* --WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME-- */
+  /* --WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME----WELCOME-- */
+  /* --SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES-- */
+  /* --SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES----SERVICES-- */
+  /* --SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER-- */
+  /* --SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER----SLIDER-- */
+  /* --ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT-- */
+  /* --ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT----ABOUT-- */
+  /* --STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS-- */
+  /* --STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS----STEPS-- */
+  /* --FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM-- */
+  /* --FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM----FORM-- */
 }
 @media (max-width: 500px) {
   .main {
@@ -476,6 +491,13 @@ body.active {
   letter-spacing: 0.27em;
   text-transform: uppercase;
   margin-bottom: 5.7rem;
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+.main_welcome_content_h._animated {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 .main_welcome_content_text {
   font-weight: 400;
@@ -483,6 +505,13 @@ body.active {
   line-height: 134%;
   text-align: center;
   margin-bottom: 5.7rem;
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0.4s;
+}
+.main_welcome_content_text._animated {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 .main_welcome_content_btn {
   font-weight: 600;
@@ -495,8 +524,14 @@ body.active {
   background: rgba(14, 14, 28, 0.71);
   border: 0.1rem solid #FFFFFF;
   border-radius: 3.5rem 0rem;
-  transition: all 0.5s ease;
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.8s ease 0.8s, border-radius 0.5s ease;
   cursor: pointer;
+}
+.main_welcome_content_btn._animated {
+  transform: scale(1);
+  opacity: 1;
 }
 .main_welcome_content_btn:hover {
   border-radius: 0rem 3.5rem;
@@ -655,10 +690,38 @@ body.active {
   height: 33.8rem;
   display: flex;
   justify-content: center;
+  opacity: 0;
+  transition: all 0.8s ease 0.4s;
 }
 .main_services_item:first-child {
   border: 0.1rem solid #FFFFFF;
   border-radius: 0rem 9rem;
+  transform: translate(-120%, 0px);
+}
+.main_services_item:nth-child(2) {
+  transform: translate(120%, 0px);
+}
+.main_services_item:nth-child(3) {
+  transform: translate(-120%, 0px);
+}
+.main_services_item:nth-child(4) {
+  transform: translate(120%, 0px);
+}
+.main_services_item:nth-child(5) {
+  transform: translate(-120%, 0px);
+}
+.main_services_item:nth-child(6) {
+  transform: translate(120%, 0px);
+}
+.main_services_item:nth-child(7) {
+  transform: translate(-120%, 0px);
+}
+.main_services_item:nth-child(8) {
+  transform: translate(120%, 0px);
+}
+.main_services_item._animated {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 .main_services_item > h2 {
   align-self: center;
@@ -812,6 +875,13 @@ body.active {
   position: relative;
   display: flex;
   align-items: center;
+  transform: translate(-120%, 0px);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+.main .slider_header._animated {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 .main .slider_header > span {
   border: 1px solid #FFFFFF;
@@ -834,7 +904,8 @@ body.active {
   align-items: center;
 }
 .main .slider_slider {
-  min-width: 0; /* Обезательно для слайдера в flex */
+  min-width: 0;
+  /* Обезательно для слайдера в flex */
   width: 241.8rem;
   height: 54.5rem;
   position: relative;
@@ -908,7 +979,8 @@ body.active {
   padding: 0rem 6.3rem;
 }
 .main .slider_arrows .slider_text {
-  min-width: 0; /* Обезательно для слайдера в flex */
+  min-width: 0;
+  /* Обезательно для слайдера в flex */
   width: 71.1rem;
   position: relative;
   /* Ограничивающая оболочка */
@@ -966,7 +1038,8 @@ body.active {
     font-size: 1.6rem;
   }
   .main .slider_slider {
-    min-width: 0; /* Обезательно для слайдера в flex */
+    min-width: 0;
+    /* Обезательно для слайдера в flex */
     width: 171.6rem;
     height: 16.4rem;
     position: relative;
@@ -1065,18 +1138,37 @@ body.active {
   font-size: 2.5rem;
   line-height: 134%;
   margin-bottom: 2.8rem;
+  overflow: hidden;
+  transform: translate(0px, 120%);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+.main .about_content > p:last-child {
+  transition: all 0.8s ease 0.4s;
+}
+.main .about_content > p._animated {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 .main .about_content > picture {
   z-index: 2;
   align-self: flex-end;
+  overflow: hidden;
+  transform: translate(100%, 0px);
+  opacity: 0;
+  transition: all 0.8s ease 0.4s;
+}
+.main .about_content > picture._animated {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 .main .about_content > picture img {
   width: 63.5rem;
 }
 .main .about > picture {
-  z-index: 0;
-  position: absolute;
-  top: 0;
+  z-index: -1;
+  position: fixed;
+  top: 30rem;
   left: 0;
   transform: rotate(25deg);
 }
@@ -1115,6 +1207,13 @@ body.active {
   position: relative;
   display: flex;
   align-items: center;
+  transform: translate(-120%, 0px);
+  opacity: 0;
+  transition: all 0.8s ease 0s;
+}
+.main .steps_header._animated {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 .main .steps_header > span {
   border: 1px solid #FFFFFF;
@@ -1142,10 +1241,30 @@ body.active {
   flex: 0 1 47%;
 }
 .main .steps_content .steps_item:nth-child(1) {
+  transform: translate(-120%, 0px);
+  opacity: 0;
+  transition: all 0.8s ease 0.4s;
   margin-bottom: 20.3rem;
 }
 .main .steps_content .steps_item:nth-child(2) {
+  transform: translate(120%, 0px);
+  opacity: 0;
+  transition: all 0.8s ease 0.4s;
   margin-bottom: 20.3rem;
+}
+.main .steps_content .steps_item:nth-child(3) {
+  transform: translate(-120%, 0px);
+  opacity: 0;
+  transition: all 0.8s ease 0.4s;
+}
+.main .steps_content .steps_item:nth-child(4) {
+  transform: translate(120%, 0px);
+  opacity: 0;
+  transition: all 0.8s ease 0.4s;
+}
+.main .steps_content .steps_item._animated {
+  transform: translate(0px, 0px);
+  opacity: 1;
 }
 .main .steps_content .steps_item .steps_number {
   width: 15.2rem;
@@ -1250,6 +1369,268 @@ body.active {
     font-size: 1rem;
   }
 }
+.main .form {
+  position: relative;
+  margin-bottom: 17.2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main .form_content > h2 {
+  font-size: 3rem;
+  line-height: 134%;
+  text-align: center;
+  margin-bottom: 1.8rem;
+}
+.main .form_content > p {
+  font-size: 2rem;
+  line-height: 134%;
+  text-align: center;
+  margin-bottom: 5.9rem;
+}
+.main .form #form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 66.6rem;
+}
+.main .form #form > div {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 2.9rem;
+}
+.main .form #form > div > input {
+  width: 31.2rem;
+  outline: none;
+  background: rgba(255, 255, 255, 0.23);
+  border: 0.1rem solid #FFFFFF;
+  padding: 1.7rem 0rem 1.7rem 3.6rem;
+  font-size: 1.4rem;
+  line-height: 134%;
+  color: rgba(255, 255, 255, 0.63);
+}
+.main .form #form > div > input.error {
+  border: 0.1rem solid #ff6246;
+}
+.main .form #form > div > input:first-child {
+  border-radius: 2rem 0px 0px 0px;
+}
+.main .form #form > div > input::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.63);
+}
+.main .form #form > div > input:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.63);
+}
+.main .form #form > div > input::placeholder {
+  color: rgba(255, 255, 255, 0.63);
+}
+.main .form #form > div > input:focus {
+  border: 0.1rem solid #e3ff46;
+}
+.main .form #form .select {
+  display: flex;
+  position: relative;
+}
+.main .form #form .select .dropdown_button {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.23);
+  border: 0.1rem solid #FFFFFF;
+  padding: 1.7rem 3.6rem;
+  font-size: 1.4rem;
+  line-height: 134%;
+  color: rgba(255, 255, 255, 0.63);
+  text-align: start;
+  cursor: pointer;
+}
+.main .form #form .select .dropdown_button::after {
+  content: " ";
+  width: 0;
+  height: 0;
+  border-width: 1.04rem 0.6rem 0rem 0.6rem;
+  border-color: rgba(255, 255, 255, 0.63) transparent transparent transparent;
+  border-style: solid;
+  position: absolute;
+  right: 3.6rem;
+  top: 2.5rem;
+}
+.main .form #form .select .dropdown_button:focus {
+  border: 0.1rem solid #e3ff46;
+}
+.main .form #form .select #dropdown-input {
+  display: none;
+}
+.main .form #form .select #dropdown-input.error ~ .dropdown_button {
+  border: 0.1rem solid #ff6246;
+}
+.main .form #form .select .dropdown_list {
+  position: absolute;
+  width: 100%;
+  top: 8.5rem;
+  z-index: 5;
+  display: none;
+}
+.main .form #form .select .dropdown_list.active {
+  display: block;
+}
+.main .form #form .select .dropdown_list .dropdown_item {
+  width: 100%;
+  background-color: #0E0E1C;
+  border: 0.1rem solid #FFFFFF;
+  padding: 1.7rem 3.6rem;
+  font-size: 1.4rem;
+  line-height: 134%;
+  color: rgba(255, 255, 255, 0.63);
+  text-align: start;
+  cursor: pointer;
+  background-position: center;
+  background-size: cover;
+}
+.main .form #form .select .dropdown_list .dropdown_item:hover:nth-child(1) {
+  background-image: url("../src/services/1.png");
+}
+.main .form #form .select .dropdown_list .dropdown_item:hover:nth-child(2) {
+  background-image: url("../src/services/2.png");
+}
+.main .form #form .select .dropdown_list .dropdown_item:hover:nth-child(3) {
+  background-image: url("../src/services/3.png");
+}
+.main .form #form .select .dropdown_list .dropdown_item:hover:nth-child(4) {
+  background-image: url("../src/services/4.png");
+}
+.main .form #form .select .dropdown_list .dropdown_item:hover:nth-child(5) {
+  background-image: url("../src/services/5.png");
+}
+.main .form #form .select .dropdown_list .dropdown_item:hover:nth-child(6) {
+  background-image: url("../src/services/6.png");
+}
+.main .form #form .select .dropdown_list .dropdown_item:hover:nth-child(7) {
+  background-image: url("../src/services/7.png");
+}
+.main .form #form .select .dropdown_list .dropdown_item:hover:nth-child(8) {
+  background: rgb(0, 0, 0);
+}
+.main .form #form > textarea {
+  width: 100%;
+  height: 13.7rem;
+  background: rgba(255, 255, 255, 0.23);
+  border-radius: 0px 0px 2rem 0px;
+  border: 0.1rem solid #FFFFFF;
+  padding: 1.7rem 3.6rem;
+  font-size: 1.4rem;
+  line-height: 134%;
+  color: rgba(255, 255, 255, 0.63);
+  margin-bottom: 2.9rem;
+  outline: none;
+  resize: vertical;
+}
+.main .form #form > textarea.error {
+  border: 0.1rem solid #ff6246;
+}
+.main .form #form > textarea:focus {
+  border: 0.1rem solid #e3ff46;
+}
+.main .form #form > textarea::-moz-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 134%;
+  color: rgba(255, 255, 255, 0.63);
+}
+.main .form #form > textarea:-ms-input-placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 134%;
+  color: rgba(255, 255, 255, 0.63);
+}
+.main .form #form > textarea::placeholder {
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.4rem;
+  line-height: 134%;
+  color: rgba(255, 255, 255, 0.63);
+}
+.main .form #form .form_button {
+  font-weight: 600;
+  font-size: 1.4rem;
+  line-height: 134%;
+  text-align: center;
+  color: #0E0E1C;
+  padding: 1.6rem 6.6rem;
+  background: #FFFFFF;
+  border: 0.1rem solid #FFFFFF;
+  border-radius: 0rem 2rem;
+  cursor: pointer;
+}
+@media (max-width: 500px) {
+  .main .form {
+    margin-bottom: 4.8rem;
+  }
+  .main .form_content > h2 {
+    font-size: 1.6rem;
+    margin-bottom: 1.3rem;
+  }
+  .main .form_content > p {
+    font-size: 1rem;
+    margin-bottom: 2.2rem;
+  }
+  .main .form #form {
+    width: 26.2rem;
+  }
+  .main .form #form > div {
+    flex-direction: column;
+    margin-bottom: 1.2rem;
+  }
+  .main .form #form > div > input {
+    width: 100%;
+    padding: 1.6rem 0rem 1.6rem 2rem;
+    font-size: 0.9rem;
+  }
+  .main .form #form > div > input:first-child {
+    border-radius: 2rem 0px 0px 0px;
+    margin-bottom: 1.2rem;
+  }
+  .main .form #form .select .dropdown_button {
+    padding: 1.6rem 2rem;
+    font-size: 0.9rem;
+  }
+  .main .form #form .select .dropdown_button::after {
+    border-width: 0.64rem 0.4rem 0rem 0.4rem;
+    right: 2.2rem;
+    top: 2rem;
+  }
+  .main .form #form .select .dropdown_list {
+    top: 5.8rem;
+  }
+  .main .form #form .select .dropdown_list .dropdown_item {
+    padding: 1.6rem 2rem;
+    font-size: 0.9rem;
+  }
+  .main .form #form > textarea {
+    height: 7.8rem;
+    padding: 1.6rem 2rem;
+    font-size: 0.9rem;
+    margin-bottom: 1.7rem;
+  }
+  .main .form #form > textarea::-moz-placeholder {
+    font-size: 0.9rem;
+  }
+  .main .form #form > textarea:-ms-input-placeholder {
+    font-size: 0.9rem;
+  }
+  .main .form #form > textarea::placeholder {
+    font-size: 0.9rem;
+  }
+  .main .form #form .form_button {
+    font-size: 1rem;
+    line-height: 134%;
+    padding: 1.5rem 5.1rem;
+  }
+}
 
 /* --MAIN----MAIN----MAIN-- */
 /* --FOOTER----FOOTER----FOOTER-- */
@@ -1296,7 +1677,8 @@ body.active {
   color: #0E0E1C;
   margin-bottom: 1.7rem;
 }
-.footer_content .footer_item > a, .footer_content .footer_item p {
+.footer_content .footer_item > a,
+.footer_content .footer_item p {
   font-size: 1.5rem;
   line-height: 134%;
   color: #0E0E1C;
@@ -1389,7 +1771,8 @@ body.active {
     font-size: 1.2rem;
     margin-bottom: 0.5rem;
   }
-  .footer_content .footer_item > a, .footer_content .footer_item p {
+  .footer_content .footer_item > a,
+.footer_content .footer_item p {
     font-size: 1.2rem;
   }
   .footer_content .footer_item .footer_map {

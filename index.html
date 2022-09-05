@@ -12,6 +12,7 @@
     <link type="Image/x-icon" href="src/favicon.ico" rel="icon">
     <title>Надійна столиця</title>
 </head>
+
 <body>
 
     <div class="wrapper">
@@ -23,9 +24,11 @@
                         <img src="src/header/Logo.svg" alt="Логотип" class="header_box_logo">
                     </div>
                     <ul class="header_menu_list">
-                        <a href="#1" class="header_menu_item"><li>Про нас</li></a>
+                        <a href="#1" class="header_menu_item">
+                            <li>Про нас</li>
+                        </a>
                         <a href="" class="header_menu_item list_hide">
-                            <li>Послуги 
+                            <li>Послуги
                                 <svg width="14" height="8" viewBox="0 0 14 8" fill="none" xmlns="http://www.w3.org/2000/svg">
                                 <path d="M1 1L7 7L13 1" stroke="white" stroke-linecap="round"/>
                                 </svg>
@@ -40,8 +43,12 @@
                             <li><a href="#" class="header_menu_list_hide_link">Опалення та вентиляція</a></li>
                             <li><a href="#" class="header_menu_list_hide_link">Будівництво бункерів</a></li>
                         </ul>
-                        <a href="#3" class="header_menu_item"><li>Портфоліо </li></a>
-                        <a href="#4" class="header_menu_item"><li>Контакти</li></a>
+                        <a href="#3" class="header_menu_item">
+                            <li>Портфоліо </li>
+                        </a>
+                        <a href="#4" class="header_menu_item">
+                            <li>Контакти</li>
+                        </a>
                         <div class="header_menu_item_box">
                             <div class="header_menu_item_box_logo">
                                 <img src="src/header/Logo.svg" alt="Logo">
@@ -60,9 +67,9 @@
 
             <div class="main_welcome">
                 <div class="main_welcome_content _container">
-                    <h1 class="main_welcome_content_h">надійна столиця</h1>
-                    <p class="main_welcome_content_text">Створюємо та втілюємо в життя <br>ідеальні інтер'єри будинків</p>
-                    <button class="main_welcome_content_btn">обговорити проект</button>
+                    <h1 class="main_welcome_content_h _anim-items">надійна столиця</h1>
+                    <p class="main_welcome_content_text _anim-items">Створюємо та втілюємо в життя <br>ідеальні інтер'єри будинків</p>
+                    <a href="#form"><p class="main_welcome_content_btn _anim-items">обговорити проект</p></a>
                 </div>
                 <div class="main_welcome_border">
                     <div class="main_welcome_border_1"></div>
@@ -71,10 +78,10 @@
             </div>
 
             <div class="main_services _container" id="2">
-                <div class="main_services_item">
+                <div class="main_services_item _anim-items">
                     <h2>Послуги</h2>
                 </div>
-                <div class="main_services_item main_services_item_r">
+                <div class="main_services_item main_services_item_r _anim-items">
                     <a href="" class="main_services_item_link">
                         <p>Дизайн інтер’єра</p>
                         <picture>
@@ -82,7 +89,7 @@
                         </picture>
                     </a>
                 </div>
-                <div class="main_services_item main_services_item_r">
+                <div class="main_services_item main_services_item_r _anim-items">
                     <a href="" class="main_services_item_link">
                         <p>Ремонт комерційної нерухомості</p>
                         <picture>
@@ -90,7 +97,7 @@
                         </picture>
                     </a>
                 </div>
-                <div class="main_services_item">
+                <div class="main_services_item _anim-items">
                     <a href="" class="main_services_item_link">
                         <p>Виготовлення<br>меблів</p>
                         <picture>
@@ -98,7 +105,7 @@
                         </picture>
                     </a>
                 </div>
-                <div class="main_services_item">
+                <div class="main_services_item _anim-items">
                     <a href="" class="main_services_item_link">
                         <p>Будівництво<br>котеджів</p>
                         <picture>
@@ -106,7 +113,7 @@
                         </picture>
                     </a>
                 </div>
-                <div class="main_services_item main_services_item_r">
+                <div class="main_services_item main_services_item_r _anim-items">
                     <a href="" class="main_services_item_link">
                         <p>Ремонт квартир під ключ</p>
                         <picture>
@@ -114,7 +121,7 @@
                         </picture>
                     </a>
                 </div>
-                <div class="main_services_item main_services_item_r">
+                <div class="main_services_item main_services_item_r _anim-items">
                     <a href="" class="main_services_item_link">
                         <p>Опалення та вентиляція</p>
                         <picture>
@@ -122,7 +129,7 @@
                         </picture>
                     </a>
                 </div>
-                <div class="main_services_item">
+                <div class="main_services_item _anim-items">
                     <a href="" class="main_services_item_link">
                         <p>Будівництво<br>бункерів</p>
                         <picture>
@@ -136,8 +143,9 @@
             </div>
 
             <div class="slider" id="3">
-                <div class="slider_header">
-                    <span></span><p>Наші роботи</p><span></span>
+                <div class="slider_header _anim-items">
+                    <span></span>
+                    <p>Наші роботи</p><span></span>
                 </div>
                 <div class="slider_box _container">
                     <div class="slider_slider">
@@ -220,40 +228,76 @@
                         </svg>
                         <div class="slider_text">
                             <div class="text-box">
-                                <div class="text-box-content"><p>ЖК “Sofi Resedent1”</p><p>90 м2</p></div>
+                                <div class="text-box-content">
+                                    <p>ЖК “Sofi Resedent1”</p>
+                                    <p>90 м2</p>
+                                </div>
                             </div>
                             <div class="text-box">
-                                <div class="text-box-content"><p>ЖК “Sofi Resedent2”</p><p>90 м2</p></div>
+                                <div class="text-box-content">
+                                    <p>ЖК “Sofi Resedent2”</p>
+                                    <p>90 м2</p>
+                                </div>
                             </div>
                             <div class="text-box">
-                                <div class="text-box-content"><p>ЖК “Sofi Resedent3”</p><p>90 м2</p></div>
+                                <div class="text-box-content">
+                                    <p>ЖК “Sofi Resedent3”</p>
+                                    <p>90 м2</p>
+                                </div>
                             </div>
                             <div class="text-box">
-                                <div class="text-box-content"><p>ЖК “Sofi Resedent4”</p><p>90 м2</p></div>
+                                <div class="text-box-content">
+                                    <p>ЖК “Sofi Resedent4”</p>
+                                    <p>90 м2</p>
+                                </div>
                             </div>
                             <div class="text-box">
-                                <div class="text-box-content"><p>ЖК “Sofi Resedent5”</p><p>90 м2</p></div>
+                                <div class="text-box-content">
+                                    <p>ЖК “Sofi Resedent5”</p>
+                                    <p>90 м2</p>
+                                </div>
                             </div>
                             <div class="text-box">
-                                <div class="text-box-content"><p>ЖК “Sofi Resedent6”</p><p>90 м2</p></div>
+                                <div class="text-box-content">
+                                    <p>ЖК “Sofi Resedent6”</p>
+                                    <p>90 м2</p>
+                                </div>
                             </div>
                             <div class="text-box">
-                                <div class="text-box-content"><p>ЖК “Sofi Resedent7”</p><p>90 м2</p></div>
+                                <div class="text-box-content">
+                                    <p>ЖК “Sofi Resedent7”</p>
+                                    <p>90 м2</p>
+                                </div>
                             </div>
                             <div class="text-box">
-                                <div class="text-box-content"><p>ЖК “Sofi Resedent8”</p><p>90 м2</p></div>
+                                <div class="text-box-content">
+                                    <p>ЖК “Sofi Resedent8”</p>
+                                    <p>90 м2</p>
+                                </div>
                             </div>
                             <div class="text-box">
-                                <div class="text-box-content"><p>ЖК “Sofi Resedent9”</p><p>90 м2</p></div>
+                                <div class="text-box-content">
+                                    <p>ЖК “Sofi Resedent9”</p>
+                                    <p>90 м2</p>
+                                </div>
                             </div>
                             <div class="text-box">
-                                <div class="text-box-content"><p>ЖК “Sofi Resedent10”</p><p>90 м2</p></div>
+                                <div class="text-box-content">
+                                    <p>ЖК “Sofi Resedent10”</p>
+                                    <p>90 м2</p>
+                                </div>
                             </div>
                             <div class="text-box">
-                                <div class="text-box-content"><p>ЖК “Sofi Resedent11”</p><p>90 м2</p></div>
+                                <div class="text-box-content">
+                                    <p>ЖК “Sofi Resedent11”</p>
+                                    <p>90 м2</p>
+                                </div>
                             </div>
                             <div class="text-box">
-                                <div class="text-box-content"><p>ЖК “Sofi Resedent12”</p><p>90 м2</p></div>
+                                <div class="text-box-content">
+                                    <p>ЖК “Sofi Resedent12”</p>
+                                    <p>90 м2</p>
+                                </div>
                             </div>
                         </div>
                         <svg class="main_advantage_box_content_slider_arrows_right" width="70" height="36" viewBox="0 0 70 36" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -265,12 +309,15 @@
 
             <div class="about" id="1">
                 <div class="about_content _container">
-                    <p>Наша компанія “Надійна Столиця” більше 10 років успішно втілює в життя ідеальні інтер’єри будинків. 
-                        Ми спеціалізуємось на виконанні внутрішніх оздоблювальних робіт різної складності - від невеликого косметичного ремонту до складних індивідуальних дизайн-проектів.<br>
-                        <br>В процесі роботи ми індивідуально підходим до  кожного клієнта, дотримуємося всіх технічних та дизайнерських завдань, 
-                        а також притримуємося усіх будівельних стандартів.
+                    <p class="_anim-items">
+                        Наша компанія “Надійна Столиця” більше 10 років успішно втілює в життя ідеальні інтер’єри будинків. Ми спеціалізуємось на виконанні внутрішніх оздоблювальних робіт різної складності - від невеликого косметичного ремонту до складних
+                        індивідуальних дизайн-проектів.
                     </p>
-                    <picture>
+                    <br>
+                    <p class="_anim-items">
+                        В процесі роботи ми індивідуально підходим до кожного клієнта, дотримуємося всіх технічних та дизайнерських завдань, а також притримуємося усіх будівельних стандартів.
+                    </p>
+                    <picture class="_anim-items">
                         <img src="src/about/1.png" alt="Photo">
                     </picture>
                 </div>
@@ -280,32 +327,33 @@
             </div>
 
             <div class="steps">
-                <div class="steps_header">
-                    <span></span><p>Етапи роботи</p><span></span>
+                <div class="steps_header _anim-items">
+                    <span></span>
+                    <p>Етапи роботи</p><span></span>
                 </div>
                 <div class="steps_content _container">
-                    <div class="steps_item">
+                    <div class="steps_item _anim-items">
                         <div class="steps_number">01</div>
                         <div class="item_text">
                             <h3>Заповнення заявки</h3>
                             <p>З вами зв’язується наш консультант та обговорює ваш проект</p>
                         </div>
                     </div>
-                    <div class="steps_item">
+                    <div class="steps_item _anim-items">
                         <div class="steps_number">02</div>
                         <div class="item_text">
                             <h3>Виїзд спеціаліста</h3>
                             <p>Наш спеціаліст приїжджає до вас зробити заміри та записати всі деталі</p>
                         </div>
                     </div>
-                    <div class="steps_item">
+                    <div class="steps_item _anim-items">
                         <div class="steps_number">03</div>
                         <div class="item_text">
                             <h3>Складання кошторису</h3>
                             <p>Ми розробляємо дизайн та складаємо кошторис всіх робіт</p>
                         </div>
                     </div>
-                    <div class="steps_item">
+                    <div class="steps_item _anim-items">
                         <div class="steps_number">04</div>
                         <div class="item_text">
                             <h3>Старт фактичних робіт</h3>
@@ -315,14 +363,40 @@
                 </div>
             </div>
 
-            <div class="form">
-                
+            <div class="form _container">
+                <div class="form_content">
+                    <h2>Зробіть перший крок до вашого  ідеального інтерьеру</h2>
+                    <p>Залиште заявку і ми зв’яжемось з вами</p>
+                </div>
+                <form action="php/sendmail.php" method="POST" id="form">
+                    <div>
+                        <input type="text" name="name" placeholder="Ваше ім’я" class="_req">
+                        <input type="text" name="phone" placeholder="Номер телефону" class="_req">
+                    </div>
+                    <div class="select">
+                        <input type="text" id="dropdown-input" class="_req" name="services" value="">
+                        <button class="dropdown_button">Послуга</button>
+                        <ul class="dropdown_list">
+                            <li class="dropdown_item" data-value="1">Дизайн інтер’єра</li>
+                            <li class="dropdown_item" data-value="2">Ремонт комерційної нерухомості</li>
+                            <li class="dropdown_item" data-value="3">Виготовлення меблів</li>
+                            <li class="dropdown_item" data-value="4">Будівництво котеджів</li>
+                            <li class="dropdown_item" data-value="5">Ремонт квартир під ключ</li>
+                            <li class="dropdown_item" data-value="6">Опалення та вентиляція</li>
+                            <li class="dropdown_item" data-value="7">Будівництво бункерів</li>
+                            <li class="dropdown_item" data-value="8">Інше</li>
+                        </ul>
+                    </div>
+                    <textarea name="massage" id="massage" class="_req" placeholder="Опишіть який проект ви бажаєте відтворити"></textarea>
+                    <button class="form_button" type="submit">Відправити</button>
+                </form>
             </div>
         </main>
 
         <footer class="footer" id="4">
             <div class="footer_header">
-                <span></span><p>Контакты</p><span></span>
+                <span></span>
+                <p>Контакты</p><span></span>
             </div>
             <div class="footer_content _container">
                 <div class="footer_item">
@@ -331,7 +405,7 @@
                         <a href="https://www.google.com/maps/place/33B,+%D1%83%D0%BB.+%D0%94%D0%B5%D0%B3%D1%82%D1%8F%D1%80%D1%91%D0%B2%D1%81%D0%BA%D0%B0%D1%8F,+33%D0%91,+%D0%9A%D0%B8%D0%B5%D0%B2,+02000/@50.4623617,30.4467681,17z/data=!3m1!4b1!4m5!3m4!1s0x40d4cc33217065d3:0xa7b65acf3dc9e8ec!8m2!3d50.4623617!4d30.4489568?hl=ru">м.Київ, вул. Дегтярівська 33б</a>
                         <img src="src/footer/map.svg" alt="">
                     </div>
-                    
+
                 </div>
                 <div class="footer_item">
                     <h3>Телефон:</h3>
@@ -357,4 +431,5 @@
     <script src="script/slick.min.js"></script>
     <script src="script/script.js"></script>
 </body>
+
 </html>
