@@ -13,6 +13,7 @@ $(document).ready(function() {
         dots: true,
         focusOnSelect: true,
         swipe: true,
+        touchThreshold: 15,
         nextArrow: '.main_advantage_box_content_slider_arrows_right',
         prevArrow: '.main_advantage_box_content_slider_arrows_left',
         asNavFor: '.slider_text',
@@ -33,6 +34,28 @@ $(document).ready(function() {
         asNavFor: '.slider_slider',
     });
 });
+
+let images = document.querySelectorAll('.main_welcome_back');
+if(images.length > 0){
+    let i = 1;
+    images[0].classList.add('open');
+    setInterval(function(){
+        if(i === 0){
+            images[3].classList.remove('open');
+        }else{
+            images[i-1].classList.remove('open');
+        }
+        images[i].classList.add('open');
+
+        if(i > 2){
+            i = 0;
+        }else{
+            i++;
+        }
+    },3000)
+}
+
+
 
 
 
@@ -174,8 +197,8 @@ $('a[href^="#"]').on("click", function() {
     let href = $(this).attr("href");
 
     close();
-
-    $(".wrapper").animate({
+    
+    $("html, body").animate({
         scrollTop: $(href).offset().top - 30
     }, {
         duration: 370, // по умолчанию «400»
@@ -208,10 +231,10 @@ $('.main_container_arrow').on('click', function() {
 
 
 const animItems = document.querySelectorAll('._anim-items');
-const wrapper = document.querySelector('.wrapper')
+
 
 if (animItems.length > 0) {
-    wrapper.addEventListener('scroll', animOnScroll);
+    window.addEventListener('scroll', animOnScroll, {passive: true});
 
     function animOnScroll() {
         for (let index = 0; index < animItems.length; index++) {

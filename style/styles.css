@@ -33,6 +33,19 @@ h6 {
   font-size: inherit;
 }
 
+html,
+body {
+  font-family: "Montserrat";
+  font-weight: 500;
+  background-color: #0E0E1C;
+  height: 100%;
+  color: #FFF;
+}
+html.active,
+body.active {
+  overflow: hidden;
+}
+
 html {
   font-size: 0.579vw;
   /* 10px on 1728px */
@@ -50,26 +63,11 @@ html {
     /* 10px on 320px */
   }
 }
-body {
-  font-family: "Montserrat";
-  font-weight: 500;
-  font-size: 1.6rem;
-  background-color: #0E0E1C;
-  height: 100%;
-  color: #FFFFFF;
-}
-body.active {
-  overflow: hidden;
-}
-
 .wrapper {
-  overflow-x: hidden;
-  display: flex;
-  height: 100vh;
-  flex-direction: column;
-}
-.wrapper.active {
   overflow: hidden;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
 }
 
 /*--CONTAINER----CONTAINER----CONTAINER--*/
@@ -113,11 +111,10 @@ body.active {
 .header_menu_list {
   z-index: 12;
   position: relative;
-  width: 100%;
   height: 4.4rem;
   display: flex;
   align-items: center;
-  justify-content: end;
+  margin-left: auto;
 }
 .header_menu_list_hide {
   visibility: hidden;
@@ -125,7 +122,7 @@ body.active {
   overflow: hidden;
   position: absolute;
   top: 4.4rem;
-  right: 8.5rem;
+  right: 9.8rem;
   background: rgba(217, 217, 217, 0.1);
   padding: 1.5rem;
 }
@@ -134,6 +131,7 @@ body.active {
 }
 .header_menu_list_hide_link {
   color: #FFFFFF;
+  font-size: 1.5rem;
 }
 .header_menu_list_hide.active {
   visibility: visible;
@@ -145,7 +143,7 @@ body.active {
     height: 2rem;
   }
   to {
-    height: 23rem;
+    height: 22rem;
   }
 }
 @keyframes slide {
@@ -153,7 +151,7 @@ body.active {
     height: 2rem;
   }
   to {
-    height: 23rem;
+    height: 22rem;
   }
 }
 .header_menu_item {
@@ -378,101 +376,108 @@ body.active {
 .main_welcome {
   width: 100%;
   height: 100vh;
-  -webkit-animation: background 30s ease infinite;
-          animation: background 30s ease infinite;
 }
-@-webkit-keyframes background {
+.main_welcome_bac {
+  position: absolute;
+  width: 100%;
+  height: 100vh;
+  z-index: 0;
+  overflow: hidden;
+}
+.main_welcome_bac img {
+  width: 100%;
+  height: 100%;
+  -o-object-position: 0rem -80rem;
+     object-position: 0rem -80rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main_welcome_bac > picture {
+  width: 100%;
+}
+.main_welcome_bac > picture._1 {
+  position: absolute;
+  opacity: 0;
+  transition: all 1s linear;
+}
+.main_welcome_bac > picture._1.open {
+  opacity: 1;
+}
+.main_welcome_bac > picture._1.open img {
+  -webkit-animation: scale 5s linear;
+          animation: scale 5s linear;
+}
+.main_welcome_bac > picture._2 {
+  position: absolute;
+  opacity: 0;
+  transition: all 1s linear;
+}
+.main_welcome_bac > picture._2.open {
+  opacity: 1;
+}
+.main_welcome_bac > picture._2.open img {
+  -webkit-animation: rescale 5s linear;
+          animation: rescale 5s linear;
+}
+.main_welcome_bac > picture._3 {
+  position: absolute;
+  opacity: 0;
+  transition: all 1s linear;
+}
+.main_welcome_bac > picture._3.open {
+  opacity: 1;
+}
+.main_welcome_bac > picture._3.open img {
+  -webkit-animation: scale 5s linear;
+          animation: scale 5s linear;
+}
+.main_welcome_bac > picture._4 {
+  position: absolute;
+  opacity: 0;
+  transition: all 1s linear;
+}
+.main_welcome_bac > picture._4.open {
+  opacity: 1;
+}
+.main_welcome_bac > picture._4.open img {
+  -webkit-animation: rescale 5s linear;
+          animation: rescale 5s linear;
+}
+.main_welcome_bac .main_welcome_back_1 {
+  width: 100%;
+  position: absolute;
+  opacity: 1;
+}
+@-webkit-keyframes scale {
   0% {
-    background: url("/src/welcome/back01.png") 0 0 no-repeat;
-    background-position: center;
-    background-size: 100%;
-  }
-  20% {
-    background: url("/src/welcome/back01.png") 0 0rem no-repeat;
-    background-position: center;
-    background-size: 150%;
-  }
-  25% {
-    background: url("/src/welcome/back02.png") 0 0rem no-repeat;
-    background-position: center;
-    background-size: 150%;
-  }
-  45% {
-    background: url("/src/welcome/back02.png") 0 0rem no-repeat;
-    background-position: center;
-    background-size: 100%;
-  }
-  50% {
-    background: url("/src/welcome/back03.png") 0 0rem no-repeat;
-    background-position: center;
-    background-size: 100%;
-  }
-  70% {
-    background: url("/src/welcome/back03.png") 0 0rem no-repeat;
-    background-position: center;
-    background-size: 150%;
-  }
-  75% {
-    background: url("/src/welcome/back04.png") 0 0rem no-repeat;
-    background-position: center;
-    background-size: 150%;
-  }
-  95% {
-    background: url("/src/welcome/back04.png") 0 0rem no-repeat;
-    background-position: center;
-    background-size: 100%;
+    transform: scale(1);
   }
   100% {
-    background: url("/src/welcome/back01.png") 0 0rem no-repeat;
-    background-position: center;
-    background-size: 100%;
+    transform: scale(1.5);
   }
 }
-@keyframes background {
+@keyframes scale {
   0% {
-    background: url("/src/welcome/back01.png") 0 0 no-repeat;
-    background-position: center;
-    background-size: 100%;
-  }
-  20% {
-    background: url("/src/welcome/back01.png") 0 0rem no-repeat;
-    background-position: center;
-    background-size: 150%;
-  }
-  25% {
-    background: url("/src/welcome/back02.png") 0 0rem no-repeat;
-    background-position: center;
-    background-size: 150%;
-  }
-  45% {
-    background: url("/src/welcome/back02.png") 0 0rem no-repeat;
-    background-position: center;
-    background-size: 100%;
-  }
-  50% {
-    background: url("/src/welcome/back03.png") 0 0rem no-repeat;
-    background-position: center;
-    background-size: 100%;
-  }
-  70% {
-    background: url("/src/welcome/back03.png") 0 0rem no-repeat;
-    background-position: center;
-    background-size: 150%;
-  }
-  75% {
-    background: url("/src/welcome/back04.png") 0 0rem no-repeat;
-    background-position: center;
-    background-size: 150%;
-  }
-  95% {
-    background: url("/src/welcome/back04.png") 0 0rem no-repeat;
-    background-position: center;
-    background-size: 100%;
+    transform: scale(1);
   }
   100% {
-    background: url("/src/welcome/back01.png") 0 0rem no-repeat;
-    background-position: center;
-    background-size: 100%;
+    transform: scale(1.5);
+  }
+}
+@-webkit-keyframes rescale {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes rescale {
+  0% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
   }
 }
 .main_welcome_content {
@@ -540,103 +545,10 @@ body.active {
   display: none;
 }
 @media (max-width: 500px) {
-  .main_welcome {
-    -webkit-animation: background 30s ease infinite;
-            animation: background 30s ease infinite;
-  }
-  @-webkit-keyframes background {
-    0% {
-      background: url("/src/welcome/back1.png") 0 0rem no-repeat;
-      background-position: center;
-      background-size: 100%;
-    }
-    20% {
-      background: url("/src/welcome/back1.png") 0 0rem no-repeat;
-      background-position: center;
-      background-size: 150%;
-    }
-    25% {
-      background: url("/src/welcome/back2.png") 0 0rem no-repeat;
-      background-position: center;
-      background-size: 150%;
-    }
-    45% {
-      background: url("/src/welcome/back2.png") 0 0rem no-repeat;
-      background-position: center;
-      background-size: 100%;
-    }
-    50% {
-      background: url("/src/welcome/back3.png") 0 0rem no-repeat;
-      background-position: center;
-      background-size: 100%;
-    }
-    70% {
-      background: url("/src/welcome/back3.png") 0 0rem no-repeat;
-      background-position: center;
-      background-size: 150%;
-    }
-    75% {
-      background: url("/src/welcome/back4.png") 0 0rem no-repeat;
-      background-position: center;
-      background-size: 150%;
-    }
-    95% {
-      background: url("/src/welcome/back4.png") 0 0rem no-repeat;
-      background-position: center;
-      background-size: 100%;
-    }
-    100% {
-      background: url("/src/welcome/back1.png") 0 0rem no-repeat;
-      background-position: center;
-      background-size: 100%;
-    }
-  }
-  @keyframes background {
-    0% {
-      background: url("/src/welcome/back1.png") 0 0rem no-repeat;
-      background-position: center;
-      background-size: 100%;
-    }
-    20% {
-      background: url("/src/welcome/back1.png") 0 0rem no-repeat;
-      background-position: center;
-      background-size: 150%;
-    }
-    25% {
-      background: url("/src/welcome/back2.png") 0 0rem no-repeat;
-      background-position: center;
-      background-size: 150%;
-    }
-    45% {
-      background: url("/src/welcome/back2.png") 0 0rem no-repeat;
-      background-position: center;
-      background-size: 100%;
-    }
-    50% {
-      background: url("/src/welcome/back3.png") 0 0rem no-repeat;
-      background-position: center;
-      background-size: 100%;
-    }
-    70% {
-      background: url("/src/welcome/back3.png") 0 0rem no-repeat;
-      background-position: center;
-      background-size: 150%;
-    }
-    75% {
-      background: url("/src/welcome/back4.png") 0 0rem no-repeat;
-      background-position: center;
-      background-size: 150%;
-    }
-    95% {
-      background: url("/src/welcome/back4.png") 0 0rem no-repeat;
-      background-position: center;
-      background-size: 100%;
-    }
-    100% {
-      background: url("/src/welcome/back1.png") 0 0rem no-repeat;
-      background-position: center;
-      background-size: 100%;
-    }
+  .main_welcome_bac img {
+    width: 200%;
+    -o-object-position: -10rem -10rem;
+       object-position: -10rem -10rem;
   }
   .main_welcome_content_h {
     font-size: 1.9rem;
@@ -660,16 +572,18 @@ body.active {
   }
   .main_welcome_border {
     display: flex;
+    position: relative;
+    z-index: 2;
   }
   .main_welcome_border_1 {
-    margin-top: -1.8rem;
+    margin-top: -1.7rem;
     height: 1.8rem;
     flex: 0 1 50%;
     border-radius: 0 2rem 0 0;
     background-color: #0E0E1C;
   }
   .main_welcome_border_2 {
-    margin-top: -1.8rem;
+    margin-top: -1.7rem;
     height: 1.8rem;
     flex: 0 1 50%;
     border-radius: 2rem 0 0 0;
@@ -944,7 +858,8 @@ body.active {
   position: absolute;
   width: 8rem;
   top: 49rem;
-  left: 46%;
+  justify-content: center;
+  left: 50%;
 }
 .main .slider_slider > ul > li {
   list-style: disc;
@@ -1010,6 +925,9 @@ body.active {
   line-height: 134%;
   text-align: center;
   text-transform: uppercase;
+}
+.main .slider_arrows .slider_text .text-box-content._page p {
+  visibility: hidden;
 }
 .main .slider_arrows svg {
   width: 7.6rem;
@@ -1150,6 +1068,12 @@ body.active {
   transform: translate(0px, 0px);
   opacity: 1;
 }
+.main .about_content > p._page {
+  margin-left: auto;
+}
+.main .about_content > p._bunker {
+  margin-top: 16.3rem;
+}
 .main .about_content > picture {
   z-index: 2;
   align-self: flex-end;
@@ -1166,7 +1090,7 @@ body.active {
   width: 63.5rem;
 }
 .main .about > picture {
-  z-index: -1;
+  z-index: -2;
   position: fixed;
   top: 30rem;
   left: 0;
@@ -1181,6 +1105,9 @@ body.active {
     width: 25.9rem;
     font-size: 1.2rem;
     margin-bottom: 2.2rem;
+  }
+  .main .about_content > p._bunker {
+    margin-top: 6.3rem;
   }
   .main .about_content > picture {
     z-index: 2;
@@ -1199,9 +1126,27 @@ body.active {
   position: relative;
   margin-top: 23.3rem;
   margin-bottom: 23.3rem;
-  background: url("/src/steps/back.png") 0rem -65rem no-repeat;
-  background-size: cover;
   padding: 9.4rem 0rem 15.3rem 0rem;
+}
+.main .steps_bac {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.main .steps_bac img {
+  width: 100%;
+  height: 100%;
+  -o-object-position: 0rem -65rem;
+     object-position: 0rem -65rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.main .steps_bac > picture {
+  width: 100%;
+  position: absolute;
 }
 .main .steps_header {
   position: relative;
@@ -1298,9 +1243,12 @@ body.active {
   .main .steps {
     margin-top: 4.1rem;
     margin-bottom: 5.2rem;
-    background: url("/src/steps/back.png") 0rem 0rem no-repeat;
-    background-size: cover;
     padding: 4.3rem 0rem 3.298rem 0rem;
+  }
+  .main .steps_bac img {
+    width: 200%;
+    -o-object-position: 0rem -20rem;
+       object-position: 0rem -20rem;
   }
   .main .steps_header > span {
     border: 1px solid #FFFFFF;
@@ -1475,7 +1423,6 @@ body.active {
 }
 .main .form #form .select .dropdown_list .dropdown_item {
   width: 100%;
-  background-color: #0E0E1C;
   border: 0.1rem solid #FFFFFF;
   padding: 1.7rem 3.6rem;
   font-size: 1.4rem;
@@ -1483,29 +1430,37 @@ body.active {
   color: rgba(255, 255, 255, 0.63);
   text-align: start;
   cursor: pointer;
+  background-color: #0E0E1C;
   background-position: center;
   background-size: cover;
 }
 .main .form #form .select .dropdown_list .dropdown_item:hover:nth-child(1) {
-  background-image: url("../src/services/1.png");
+  background-image: -webkit-image-set(url("../src/services/1.webp") 1x, url("../src/services/1.png") 1x);
+  background-image: image-set(url("../src/services/1.webp") 1x, url("../src/services/1.png") 1x);
 }
 .main .form #form .select .dropdown_list .dropdown_item:hover:nth-child(2) {
-  background-image: url("../src/services/2.png");
+  background-image: -webkit-image-set(url("../src/services/2.webp") 1x, url("../src/services/2.png") 1x);
+  background-image: image-set(url("../src/services/2.webp") 1x, url("../src/services/2.png") 1x);
 }
 .main .form #form .select .dropdown_list .dropdown_item:hover:nth-child(3) {
-  background-image: url("../src/services/3.png");
+  background-image: -webkit-image-set(url("../src/services/3.webp") 1x, url("../src/services/3.png") 1x);
+  background-image: image-set(url("../src/services/3.webp") 1x, url("../src/services/3.png") 1x);
 }
 .main .form #form .select .dropdown_list .dropdown_item:hover:nth-child(4) {
-  background-image: url("../src/services/4.png");
+  background-image: -webkit-image-set(url("../src/services/4.webp") 1x, url("../src/services/4.png") 1x);
+  background-image: image-set(url("../src/services/4.webp") 1x, url("../src/services/4.png") 1x);
 }
 .main .form #form .select .dropdown_list .dropdown_item:hover:nth-child(5) {
-  background-image: url("../src/services/5.png");
+  background-image: -webkit-image-set(url("../src/services/5.webp") 1x, url("../src/services/5.png") 1x);
+  background-image: image-set(url("../src/services/5.webp") 1x, url("../src/services/5.png") 1x);
 }
 .main .form #form .select .dropdown_list .dropdown_item:hover:nth-child(6) {
-  background-image: url("../src/services/6.png");
+  background-image: -webkit-image-set(url("../src/services/6.webp") 1x, url("../src/services/6.png") 1x);
+  background-image: image-set(url("../src/services/6.webp") 1x, url("../src/services/6.png") 1x);
 }
 .main .form #form .select .dropdown_list .dropdown_item:hover:nth-child(7) {
-  background-image: url("../src/services/7.png");
+  background-image: -webkit-image-set(url("../src/services/7.webp") 1x, url("../src/services/7.png") 1x);
+  background-image: image-set(url("../src/services/7.webp") 1x, url("../src/services/7.png") 1x);
 }
 .main .form #form .select .dropdown_list .dropdown_item:hover:nth-child(8) {
   background: rgb(0, 0, 0);
@@ -1713,7 +1668,6 @@ body.active {
   flex: 0 1 35%;
 }
 .footer_content .footer_item:nth-child(3) {
-  flex: 0 1 35%;
   margin-left: 7rem;
 }
 .footer_content .footer_item:last-child {

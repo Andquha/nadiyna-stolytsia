@@ -33,6 +33,17 @@ h6 {
     font-size: inherit;
 }
 
+html,
+body {
+    font-family: 'Montserrat';
+    font-weight: 500;
+    background-color: #0E0E1C;
+    height: 100%;
+    color: #FFF;
+    &.active{
+        overflow: hidden;
+    }
+}
 html {
     font-size: 0.579vw;
     /* 10px on 1728px */
@@ -52,26 +63,11 @@ html {
     }
 }
 
-body {
-    font-family: 'Montserrat';
-    font-weight: 500;
-    font-size: 1.6rem;
-    background-color: #0E0E1C;
-    height: 100%;
-    color: #FFFFFF;
-    &.active {
-        overflow: hidden;
-    }
-}
-
 .wrapper {
-    overflow-x: hidden;
+    overflow: hidden;
     display: flex;
-    height: 100vh;
+    min-height: 100vh;
     flex-direction: column;
-    &.active {
-        overflow: hidden;
-    }
 }
 
 
@@ -120,18 +116,17 @@ body {
         &_list {
             z-index: 12;
             position: relative;
-            width: 100%;
             height: 4.4rem;
             display: flex;
             align-items: center;
-            justify-content: end;
+            margin-left: auto;
             &_hide {
                 visibility: hidden;
                 height: 1px;
                 overflow: hidden;
                 position: absolute;
                 top: 4.4rem;
-                right: 8.5rem;
+                right: 9.8rem;
                 background: rgba(217, 217, 217, 0.1);
                 padding: 1.5rem;
                 >li:not(:last-child) {
@@ -139,6 +134,7 @@ body {
                 }
                 &_link {
                     color: #FFFFFF;
+                    font-size: 1.5rem;
                 }
                 &.active {
                     visibility: visible;
@@ -150,7 +146,7 @@ body {
                     height: 2rem;
                 }
                 to {
-                    height: 23rem;
+                    height: 22rem;
                 }
             }
         }
@@ -360,52 +356,86 @@ body {
     &_welcome {
         width: 100%;
         height: 100vh;
-        animation: background 30s ease infinite;
-        @keyframes background {
-            0% {
-                background: url("/src/welcome/back01.png") 0 0 no-repeat;
-                background-position: center;
-                background-size: 100%;
+        &_bac {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            z-index: 0;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                object-position: 0rem -80rem;
+                object-fit: cover;
             }
-            20% {
-                background: url("/src/welcome/back01.png") 0 0rem no-repeat;
-                background-position: center;
-                background-size: 150%;
+            > picture {
+                width: 100%;
+                &._1{
+                    position: absolute;
+                    opacity: 0;
+                    transition: all 1s linear;
+                    &.open{
+                        opacity: 1;
+                        img {
+                            animation: scale 5s linear;
+                        }
+                    }
+                }
+                &._2{
+                    position: absolute;
+                    opacity: 0;
+                    transition: all 1s linear;
+                    &.open{
+                        opacity: 1;
+                        img {
+                            animation: rescale 5s linear;
+                        }
+                    }
+                }
+                &._3{
+                    position: absolute;
+                    opacity: 0;
+                    transition: all 1s linear;
+                    &.open{
+                        opacity: 1;
+                        img {
+                            animation: scale 5s linear;
+                        }
+                    }
+                }
+                &._4{
+                    position: absolute;
+                    opacity: 0;
+                    transition: all 1s linear;
+                    &.open{
+                        opacity: 1;
+                        img {
+                            animation: rescale 5s linear;
+                        }
+                    }
+                }
             }
-            25% {
-                background: url("/src/welcome/back02.png") 0 0rem no-repeat;
-                background-position: center;
-                background-size: 150%;
+            .main_welcome_back_1{
+                width: 100%;
+                position: absolute;
+                opacity: 1;
+                
             }
-            45% {
-                background: url("/src/welcome/back02.png") 0 0rem no-repeat;
-                background-position: center;
-                background-size: 100%;
+        }
+        @keyframes scale {
+            0%{
+                transform: scale(1);
             }
-            50% {
-                background: url("/src/welcome/back03.png") 0 0rem no-repeat;
-                background-position: center;
-                background-size: 100%;
+            100%{
+                transform: scale(1.5);
             }
-            70% {
-                background: url("/src/welcome/back03.png") 0 0rem no-repeat;
-                background-position: center;
-                background-size: 150%;
+        }
+        @keyframes rescale {
+            0%{
+                transform: scale(1.5);
             }
-            75% {
-                background: url("/src/welcome/back04.png") 0 0rem no-repeat;
-                background-position: center;
-                background-size: 150%;
-            }
-            95% {
-                background: url("/src/welcome/back04.png") 0 0rem no-repeat;
-                background-position: center;
-                background-size: 100%;
-            }
-            100% {
-                background: url("/src/welcome/back01.png") 0 0rem no-repeat;
-                background-position: center;
-                background-size: 100%;
+            100%{
+                transform: scale(1);
             }
         }
         &_content {
@@ -479,52 +509,10 @@ body {
     }
     @media (max-width: 500px) {
         &_welcome {
-            animation: background 30s ease infinite;
-            @keyframes background {
-                0% {
-                    background: url("/src/welcome/back1.png") 0 0rem no-repeat;
-                    background-position: center;
-                    background-size: 100%;
-                }
-                20% {
-                    background: url("/src/welcome/back1.png") 0 0rem no-repeat;
-                    background-position: center;
-                    background-size: 150%;
-                }
-                25% {
-                    background: url("/src/welcome/back2.png") 0 0rem no-repeat;
-                    background-position: center;
-                    background-size: 150%;
-                }
-                45% {
-                    background: url("/src/welcome/back2.png") 0 0rem no-repeat;
-                    background-position: center;
-                    background-size: 100%;
-                }
-                50% {
-                    background: url("/src/welcome/back3.png") 0 0rem no-repeat;
-                    background-position: center;
-                    background-size: 100%;
-                }
-                70% {
-                    background: url("/src/welcome/back3.png") 0 0rem no-repeat;
-                    background-position: center;
-                    background-size: 150%;
-                }
-                75% {
-                    background: url("/src/welcome/back4.png") 0 0rem no-repeat;
-                    background-position: center;
-                    background-size: 150%;
-                }
-                95% {
-                    background: url("/src/welcome/back4.png") 0 0rem no-repeat;
-                    background-position: center;
-                    background-size: 100%;
-                }
-                100% {
-                    background: url("/src/welcome/back1.png") 0 0rem no-repeat;
-                    background-position: center;
-                    background-size: 100%;
+            &_bac {
+                img {
+                    width: 200%;
+                    object-position: -10rem -10rem;
                 }
             }
             &_content {
@@ -551,15 +539,17 @@ body {
             }
             &_border {
                 display: flex;
+                position: relative;
+                z-index: 2;
                 &_1 {
-                    margin-top: -1.8rem;
+                    margin-top: -1.7rem;
                     height: 1.8rem;
                     flex: 0 1 50%;
                     border-radius: 0 2rem 0 0;
                     background-color: #0E0E1C;
                 }
                 &_2 {
-                    margin-top: -1.8rem;
+                    margin-top: -1.7rem;
                     height: 1.8rem;
                     flex: 0 1 50%;
                     border-radius: 2rem 0 0 0;
@@ -845,7 +835,8 @@ body {
                 position: absolute;
                 width: 8rem;
                 top: 49rem;
-                left: 46%;
+                justify-content: center;
+                left: 50%;
                 >li {
                     list-style: disc;
                     margin: 0rem 1rem;
@@ -913,6 +904,11 @@ body {
                             line-height: 134%;
                             text-align: center;
                             text-transform: uppercase;
+                        }
+                        &._page{
+                            p{
+                                visibility: hidden;
+                            }
                         }
                     }
                 }
@@ -1066,12 +1062,19 @@ body {
                 transform: translate(0px, 120%);
                 opacity: 0;
                 transition: all 0.8s ease 0s;
+
                 &:last-child{
                     transition: all 0.8s ease 0.4s;
                 }
                 &._animated {
                     transform: translate(0px, 0px);
                     opacity: 1;
+                }
+                &._page{
+                    margin-left: auto;
+                }
+                &._bunker{
+                    margin-top: 16.3rem;
                 }
             }
             >picture {
@@ -1092,7 +1095,7 @@ body {
             }
         }
         >picture {
-            z-index: -1;
+            z-index: -2;
             position: fixed;
             top: 30rem;
             left: 0;
@@ -1106,11 +1109,15 @@ body {
     @media (max-width: 500px) {
         .about {
             &_content {
-                >p {
+                > p {
                     width: 25.9rem;
                     font-size: 1.2rem;
                     margin-bottom: 2.2rem;
+                    &._bunker{
+                        margin-top: 6.3rem;
+                    }
                 }
+                
                 >picture {
                     z-index: 2;
                     align-self: center;
@@ -1135,9 +1142,25 @@ body {
         position: relative;
         margin-top: 23.3rem;
         margin-bottom: 23.3rem;
-        background: url("/src/steps/back.png") 0rem -65rem no-repeat;
-        background-size: cover;
         padding: 9.4rem 0rem 15.3rem 0rem;
+        &_bac {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            z-index: 0;
+            overflow: hidden;
+            img {
+                width: 100%;
+                height: 100%;
+                object-position: 0rem -65rem;
+                object-fit: cover;
+            }
+            > picture {
+                width: 100%;
+                position: absolute;
+            }
+        }
         &_header {
             position: relative;
             display: flex;
@@ -1237,9 +1260,13 @@ body {
         .steps {
             margin-top: 4.1rem;
             margin-bottom: 5.2rem;
-            background: url("/src/steps/back.png") 0rem 0rem no-repeat;
-            background-size: cover;
             padding: 4.3rem 0rem 3.298rem 0rem;
+            &_bac {
+                img {
+                    width: 200%;
+                    object-position: 0rem -20rem;
+                }
+            }
             &_header {
                 >span {
                     border: 1px solid #FFFFFF;
@@ -1422,7 +1449,6 @@ body {
                     }
                     .dropdown_item{
                         width: 100%;
-                        background-color: #0E0E1C;
                         border: 0.1rem solid #FFFFFF;
                         padding: 1.7rem 3.6rem;
                         font-size: 1.4rem;
@@ -1431,29 +1457,30 @@ body {
                         text-align: start;
                         cursor: pointer;
                         &:hover:nth-child(1){
-                            background-image: url('../src/services/1.png');
+                            background-image: image-set(url('../src/services/1.webp') 1x, url('../src/services/1.png') 1x);
                         }
                         &:hover:nth-child(2){
-                            background-image: url('../src/services/2.png');
+                            background-image: image-set(url('../src/services/2.webp') 1x, url('../src/services/2.png') 1x);
                         }
                         &:hover:nth-child(3){
-                            background-image: url('../src/services/3.png');
+                            background-image: image-set(url('../src/services/3.webp') 1x, url('../src/services/3.png') 1x);
                         }
                         &:hover:nth-child(4){
-                            background-image: url('../src/services/4.png');
+                            background-image: image-set(url('../src/services/4.webp') 1x, url('../src/services/4.png') 1x);
                         }
                         &:hover:nth-child(5){
-                            background-image: url('../src/services/5.png');
+                            background-image: image-set(url('../src/services/5.webp') 1x, url('../src/services/5.png') 1x);
                         }
                         &:hover:nth-child(6){
-                            background-image: url('../src/services/6.png');
+                            background-image: image-set(url('../src/services/6.webp') 1x, url('../src/services/6.png') 1x);
                         }
                         &:hover:nth-child(7){
-                            background-image: url('../src/services/7.png');
+                            background-image: image-set(url('../src/services/7.webp') 1x, url('../src/services/7.png') 1x);
                         }
                         &:hover:nth-child(8){
                             background: rgba(0, 0, 0, 1);
                         }
+                        background-color: #0E0E1C;
                         background-position: center;
                         background-size: cover;
                     }
@@ -1650,7 +1677,7 @@ body {
                 flex: 0 1 35%;
             }
             &:nth-child(3) {
-                flex: 0 1 35%;
+                // flex: 0 1 35%;
                 margin-left: 7rem;
             }
             &:last-child {

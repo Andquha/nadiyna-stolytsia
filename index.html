@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:regular,500,600,700,800&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style/styles.css">
+    <link rel="stylesheet" href="style/logo.css">
     <link rel="shortcut icon" href="src/favicon-16x16.png" type="image/png">
     <link rel="shortcut icon" href="src/favicon-32x32.png" type="image/png">
     <link type="image/x-icon" href="src/favicon.ico" rel="shortcut icon">
@@ -14,14 +15,23 @@
 </head>
 
 <body>
-
+    <div class="preloder_box">
+        <div class="preloader">
+            <div class="box_logo">
+                <span class="span"></span>
+                <div class="H"></div>
+                <span class="H_span"></span>
+                <div class="C">С</div>
+                <span class="C_span"></span>
+            </div>
+        </div>
+    </div>
     <div class="wrapper">
-
         <header class="header">
             <div class="header_container">
                 <div class="header_menu">
                     <div class="header_box">
-                        <img src="src/header/Logo.svg" alt="Логотип" class="header_box_logo">
+                        <a href="index.html"><img src="src/header/Logo.svg" alt="Логотип" class="header_box_logo"></a>
                     </div>
                     <ul class="header_menu_list">
                         <a href="#1" class="header_menu_item">
@@ -35,13 +45,13 @@
                             </li>
                         </a>
                         <ul class="header_menu_list_hide">
-                            <li><a href="#" class="header_menu_list_hide_link">Дизайн інтер’єра</a></li>
-                            <li><a href="#" class="header_menu_list_hide_link">Ремонт комерційної нерухомості</a></li>
-                            <li><a href="#" class="header_menu_list_hide_link">Виготовлення меблів</a></li>
-                            <li><a href="#" class="header_menu_list_hide_link">Будівництво котеджів</a></li>
-                            <li><a href="#" class="header_menu_list_hide_link">Ремонт квартир під ключ</a></li>
-                            <li><a href="#" class="header_menu_list_hide_link">Опалення та вентиляція</a></li>
-                            <li><a href="#" class="header_menu_list_hide_link">Будівництво бункерів</a></li>
+                            <li><a href="dysain.html" class="header_menu_list_hide_link">Дизайн інтер’єра</a></li>
+                            <li><a href="komercia.html" class="header_menu_list_hide_link">Ремонт комерційної нерухомості</a></li>
+                            <li><a href="mebel.html" class="header_menu_list_hide_link">Виготовлення меблів</a></li>
+                            <li><a href="kotej.html" class="header_menu_list_hide_link">Будівництво котеджів</a></li>
+                            <li><a href="remont.html" class="header_menu_list_hide_link">Ремонт квартир під ключ</a></li>
+                            <li><a href="opalenia.html" class="header_menu_list_hide_link">Опалення та вентиляція</a></li>
+                            <li><a href="bunker.html" class="header_menu_list_hide_link">Будівництво бункерів</a></li>
                         </ul>
                         <a href="#3" class="header_menu_item">
                             <li>Портфоліо </li>
@@ -62,14 +72,31 @@
                 </div>
             </div>
         </header>
-
         <main class="main">
 
             <div class="main_welcome">
+                <div class="main_welcome_bac">
+                    <picture class="main_welcome_back _1">
+                        <source srcset="src/welcome/back01.webp" type="image/webp">
+                        <img src="src/welcome/back01.png" alt="Photo">
+                    </picture>
+                    <picture class="main_welcome_back _2">
+                        <source srcset="src/welcome/back02.webp" type="image/webp">
+                        <img src="src/welcome/back02.png" alt="Photo">
+                    </picture>
+                    <picture class="main_welcome_back _3">
+                        <source srcset="src/welcome/back03.webp" type="image/webp">
+                        <img src="src/welcome/back03.png" alt="Photo">
+                    </picture>
+                    <picture class="main_welcome_back _4">
+                        <source srcset="src/welcome/back04.webp" type="image/webp">
+                        <img src="src/welcome/back04.png" alt="Photo">
+                    </picture>
+                </div>
                 <div class="main_welcome_content _container">
                     <h1 class="main_welcome_content_h _anim-items">надійна столиця</h1>
                     <p class="main_welcome_content_text _anim-items">Створюємо та втілюємо в життя <br>ідеальні інтер'єри будинків</p>
-                    <a href="#form"><p class="main_welcome_content_btn _anim-items">обговорити проект</p></a>
+                    <a href="#formanchor"><p class="main_welcome_content_btn _anim-items">обговорити проект</p></a>
                 </div>
                 <div class="main_welcome_border">
                     <div class="main_welcome_border_1"></div>
@@ -82,57 +109,64 @@
                     <h2>Послуги</h2>
                 </div>
                 <div class="main_services_item main_services_item_r _anim-items">
-                    <a href="" class="main_services_item_link">
+                    <a href="dysain.html" class="main_services_item_link">
                         <p>Дизайн інтер’єра</p>
                         <picture>
+                            <source srcset="src/services/1.webp" type="image/webp">
                             <img src="src/services/1.png" alt="Photo">
                         </picture>
                     </a>
                 </div>
                 <div class="main_services_item main_services_item_r _anim-items">
-                    <a href="" class="main_services_item_link">
+                    <a href="komercia.html" class="main_services_item_link">
                         <p>Ремонт комерційної нерухомості</p>
                         <picture>
+                            <source srcset="src/services/2.webp" type="image/webp">
                             <img src="src/services/2.png" alt="Photo">
                         </picture>
                     </a>
                 </div>
                 <div class="main_services_item _anim-items">
-                    <a href="" class="main_services_item_link">
+                    <a href="mebel.html" class="main_services_item_link">
                         <p>Виготовлення<br>меблів</p>
                         <picture>
+                            <source srcset="src/services/3.webp" type="image/webp">
                             <img src="src/services/3.png" alt="Photo">
                         </picture>
                     </a>
                 </div>
                 <div class="main_services_item _anim-items">
-                    <a href="" class="main_services_item_link">
+                    <a href="kotej.html" class="main_services_item_link">
                         <p>Будівництво<br>котеджів</p>
                         <picture>
+                            <source srcset="src/services/4.webp" type="image/webp">
                             <img src="src/services/4.png" alt="Photo">
                         </picture>
                     </a>
                 </div>
                 <div class="main_services_item main_services_item_r _anim-items">
-                    <a href="" class="main_services_item_link">
+                    <a href="remont.html" class="main_services_item_link">
                         <p>Ремонт квартир під ключ</p>
                         <picture>
+                            <source srcset="src/services/5.webp" type="image/webp">
                             <img src="src/services/5.png" alt="Photo">
                         </picture>
                     </a>
                 </div>
                 <div class="main_services_item main_services_item_r _anim-items">
-                    <a href="" class="main_services_item_link">
+                    <a href="opalenia.html" class="main_services_item_link">
                         <p>Опалення та вентиляція</p>
                         <picture>
+                            <source srcset="src/services/6.webp" type="image/webp">
                             <img src="src/services/6.png" alt="Photo">
                         </picture>
                     </a>
                 </div>
                 <div class="main_services_item _anim-items">
-                    <a href="" class="main_services_item_link">
+                    <a href="bunker.html" class="main_services_item_link">
                         <p>Будівництво<br>бункерів</p>
                         <picture>
+                            <source srcset="src/services/7.webp" type="image/webp">
                             <img src="src/services/7.png" alt="Photo">
                         </picture>
                     </a>
@@ -152,72 +186,84 @@
                         <div class="slider_slide">
                             <picture>
                                 <span></span>
+                                <source srcset="src/slider/1.webp" type="image/webp">
                                 <img src="src/slider/1.png" alt="Photo">
                             </picture>
                         </div>
                         <div class="slider_slide">
                             <picture>
                                 <span></span>
+                                <source srcset="src/slider/2.webp" type="image/webp">
                                 <img src="src/slider/2.png" alt="Photo">
                             </picture>
                         </div>
                         <div class="slider_slide">
                             <picture>
                                 <span></span>
+                                <source srcset="src/slider/3.webp" type="image/webp">
                                 <img src="src/slider/3.png" alt="Photo">
                             </picture>
                         </div>
                         <div class="slider_slide">
                             <picture>
                                 <span></span>
+                                <source srcset="src/slider/4.webp" type="image/webp">
                                 <img src="src/slider/4.png" alt="Photo">
                             </picture>
                         </div>
                         <div class="slider_slide">
                             <picture>
                                 <span></span>
+                                <source srcset="src/slider/5.webp" type="image/webp">
                                 <img src="src/slider/5.png" alt="Photo">
                             </picture>
                         </div>
                         <div class="slider_slide">
                             <picture>
                                 <span></span>
+                                <source srcset="src/slider/6.webp" type="image/webp">
                                 <img src="src/slider/6.png" alt="Photo">
                             </picture>
                         </div>
                         <div class="slider_slide">
                             <picture>
                                 <span></span>
+                                <source srcset="src/slider/7.webp" type="image/webp">
                                 <img src="src/slider/7.png" alt="Photo">
                             </picture>
                         </div>
                         <div class="slider_slide">
                             <picture>
                                 <span></span>
+                                <source srcset="src/slider/8.webp" type="image/webp">
                                 <img src="src/slider/8.png" alt="Photo">
                             </picture>
                         </div>
                         <div class="slider_slide">
                             <picture>
                                 <span></span>
+                                <source srcset="src/slider/9.webp" type="image/webp">
                                 <img src="src/slider/9.png" alt="Photo">
                             </picture>
                         </div>
                         <div class="slider_slide">
                             <picture>
                                 <span></span>
+                                <source srcset="src/slider/10.webp" type="image/webp">
                                 <img src="src/slider/10.png" alt="Photo">
                             </picture>
                         </div>
                         <div class="slider_slide">
                             <picture>
                                 <span></span>
+                                <source srcset="src/slider/11.webp" type="image/webp">
                                 <img src="src/slider/11.png" alt="Photo">
                             </picture>
                         </div>
                         <div class="slider_slide">
                             <picture>
                                 <span></span>
+                                <source srcset="src/slider/12.webp" type="image/webp">
                                 <img src="src/slider/12.png" alt="Photo">
                             </picture>
                         </div>
@@ -229,74 +275,74 @@
                         <div class="slider_text">
                             <div class="text-box">
                                 <div class="text-box-content">
-                                    <p>ЖК “Sofi Resedent1”</p>
+                                    <p>ЖК “Sofi Resedent”</p>
                                     <p>90 м2</p>
                                 </div>
                             </div>
                             <div class="text-box">
                                 <div class="text-box-content">
-                                    <p>ЖК “Sofi Resedent2”</p>
+                                    <p>ЖК “ТЕТРІС ХОЛЛ”</p>
+                                    <p>40 м2</p>
+                                </div>
+                            </div>
+                            <div class="text-box">
+                                <div class="text-box-content">
+                                    <p>ЖК “ТЕТРІС ХОЛЛ”</p>
+                                    <p>60 м2</p>
+                                </div>
+                            </div>
+                            <div class="text-box">
+                                <div class="text-box-content">
+                                    <p>ЖК “ТЕТРІС ХОЛЛ”</p>
+                                    <p>40 м2</p>
+                                </div>
+                            </div>
+                            <div class="text-box">
+                                <div class="text-box-content">
+                                    <p>ЖК “hohian house”</p>
                                     <p>90 м2</p>
                                 </div>
                             </div>
                             <div class="text-box">
                                 <div class="text-box-content">
-                                    <p>ЖК “Sofi Resedent3”</p>
+                                    <p>ЖК “парк нивки”</p>
                                     <p>90 м2</p>
                                 </div>
                             </div>
                             <div class="text-box">
                                 <div class="text-box-content">
-                                    <p>ЖК “Sofi Resedent4”</p>
+                                    <p>ЖК “парк нивки”</p>
                                     <p>90 м2</p>
                                 </div>
                             </div>
                             <div class="text-box">
                                 <div class="text-box-content">
-                                    <p>ЖК “Sofi Resedent5”</p>
+                                    <p>ЖК “ТЕТРІС ХОЛЛ”</p>
+                                    <p>40 м2</p>
+                                </div>
+                            </div>
+                            <div class="text-box">
+                                <div class="text-box-content">
+                                    <p>ЖК “Sofi Resedent”</p>
                                     <p>90 м2</p>
                                 </div>
                             </div>
                             <div class="text-box">
                                 <div class="text-box-content">
-                                    <p>ЖК “Sofi Resedent6”</p>
-                                    <p>90 м2</p>
+                                    <p>ЖК “парк нивки”</p>
+                                    <p>70 м2</p>
                                 </div>
                             </div>
                             <div class="text-box">
                                 <div class="text-box-content">
-                                    <p>ЖК “Sofi Resedent7”</p>
-                                    <p>90 м2</p>
+                                    <p>ЖК “парк нивки”</p>
+                                    <p>70 м2</p>
                                 </div>
                             </div>
                             <div class="text-box">
                                 <div class="text-box-content">
-                                    <p>ЖК “Sofi Resedent8”</p>
-                                    <p>90 м2</p>
-                                </div>
-                            </div>
-                            <div class="text-box">
-                                <div class="text-box-content">
-                                    <p>ЖК “Sofi Resedent9”</p>
-                                    <p>90 м2</p>
-                                </div>
-                            </div>
-                            <div class="text-box">
-                                <div class="text-box-content">
-                                    <p>ЖК “Sofi Resedent10”</p>
-                                    <p>90 м2</p>
-                                </div>
-                            </div>
-                            <div class="text-box">
-                                <div class="text-box-content">
-                                    <p>ЖК “Sofi Resedent11”</p>
-                                    <p>90 м2</p>
-                                </div>
-                            </div>
-                            <div class="text-box">
-                                <div class="text-box-content">
-                                    <p>ЖК “Sofi Resedent12”</p>
-                                    <p>90 м2</p>
+                                    <p>ЖК “тетріс холл”</p>
+                                    <p>40 м2</p>
                                 </div>
                             </div>
                         </div>
@@ -327,6 +373,12 @@
             </div>
 
             <div class="steps">
+                <div class="steps_bac">
+                    <picture class="steps_back">
+                        <source srcset="src/steps/back.webp" type="image/webp">
+                        <img src="src/steps/back.png" alt="Photo">
+                    </picture>
+                </div>
                 <div class="steps_header _anim-items">
                     <span></span>
                     <p>Етапи роботи</p><span></span>
@@ -363,7 +415,7 @@
                 </div>
             </div>
 
-            <div class="form _container">
+            <div class="form _container" id="formanchor">
                 <div class="form_content">
                     <h2>Зробіть перший крок до вашого  ідеального інтерьеру</h2>
                     <p>Залиште заявку і ми зв’яжемось з вами</p>
@@ -392,7 +444,6 @@
                 </form>
             </div>
         </main>
-
         <footer class="footer" id="4">
             <div class="footer_header">
                 <span></span>
@@ -424,9 +475,8 @@
                 </div>
             </div>
         </footer>
-
     </div>
-
+    <script src="/script/animated.js"></script>
     <script src="script/jquery-3.6.0.min.js"></script>
     <script src="script/slick.min.js"></script>
     <script src="script/script.js"></script>
